@@ -1,0 +1,31 @@
+name: Supabase Keep-Alive
+
+# Mantiene el proyecto Supabase activo para evitar la pausa por inactividad
+# (el plan Free pausa el proyecto tras 1 semana sin actividad).
+# Hace un ping ligero a la API REST cada 3 días.
+
+on:
+  schedule:
+    # Ejecuta a las 12:00 UTC cada 3 días (días 1,4,7,...,28 de cada mes)
+    - cron: "0 12 */3 * *"
+  workflow_dispatch: # permite ejecutarlo manualmente desde la pestaña Actions
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API
+        run: |
+          echo "Pinging Supabase to keep project active..."
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/conversations?select=id&limit=1" \
+            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "HTTP status: $HTTP_CODE"
+          # 200 (ok) o 401/403 (RLS bloquea, pero la DB respondió = sigue activa)
+          if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "401" ] || [ "$HTTP_CODE" = "403" ]; then
+            echo "Supabase respondio. Proyecto activo."
+          else
+            echo "Respuesta inesperada ($HTTP_CODE). Revisar el proyecto."
+            exit 1
+          fi

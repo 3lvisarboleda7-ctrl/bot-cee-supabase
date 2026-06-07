@@ -1,0 +1,55 @@
+# ============================================
+#  .gitignore — Bot a Costo Cero (Persona 3)
+# ============================================
+
+# --- Credenciales y variables de entorno (CRÍTICO: nunca commitear) ---
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+*.key
+secrets.json
+credentials.json
+
+# --- Dependencias ---
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Build / output ---
+dist/
+build/
+*.egg-info/
+.next/
+out/
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Graphify (herramienta personal de grafo, no es parte del entregable) ---
+graphify-out/
+
+# --- Comprimidos (el .docx ya va en el repo; el zip es redundante) ---
+*.zip
+
+# --- Script de build del Word (opcional, artefacto local) ---
+build_resumen.js
+
+# --- Supabase local (si se usa CLI más adelante) ---
+.branches/
+.temp/
+supabase/.temp/
