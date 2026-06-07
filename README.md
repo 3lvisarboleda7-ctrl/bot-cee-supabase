@@ -1,7 +1,7 @@
 # Bot a Costo Cero — Persistencia y Autenticación (Supabase)
 
 Capa de **base de datos + autenticación** del chatbot del **CEE — Centro de Especialización Ejecutiva (UNI-FIIS)**.
-La página web donde se aloja el bot la gestiona **CCAT**.
+
 
 > **Objetivo del proyecto:** construir el chatbot a **costo cero**, sin depender de funciones de pago. Esta parte (Persona 3) usa **Supabase Free Tier**: PostgreSQL + Anonymous Auth + Row Level Security, todo gratis.
 
@@ -67,4 +67,4 @@ La página web donde se aloja el bot la gestiona **CCAT**.
 
 ---
 
-*Proyecto académico · UNI-FIIS · Persona 3 · 2026*
+*Proyecto académico · UNI-FIIS  · 2026*
