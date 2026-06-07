@@ -1,0 +1,515 @@
+id,conversation_id,role,content,token_count,created_at
+1,c0000001-0000-0000-0000-000000000001,user,"Hola, ¿qué es el CCAT?",8,2026-06-06 23:38:05.505111+00
+2,c0000001-0000-0000-0000-000000000001,assistant,"¡Hola María! El CCAT es el club de ciencia y tecnología. Organizamos talleres, proyectos y eventos para estudiantes. ¿Te gustaría saber sobre alguno en particular?",38,2026-06-06 23:38:05.505111+00
+3,c0000001-0000-0000-0000-000000000001,user,"Sí, ¿qué talleres tienen?",9,2026-06-06 23:38:05.505111+00
+4,c0000001-0000-0000-0000-000000000001,assistant,"Tenemos talleres de programación, robótica, diseño y datos. Todos son gratuitos para miembros. ¿Quieres los horarios?",32,2026-06-06 23:38:05.505111+00
+5,c0000002-0000-0000-0000-000000000002,user,¿A qué hora es el taller de robótica?,12,2026-06-06 23:38:05.505111+00
+6,c0000002-0000-0000-0000-000000000002,assistant,El taller de robótica es los miércoles de 4 a 6 p. m. en el laboratorio B. ¿Te reservo un cupo?,30,2026-06-06 23:38:05.505111+00
+7,c0000003-0000-0000-0000-000000000003,user,"Buenas, quiero inscribirme al club",9,2026-06-06 23:38:05.505111+00
+8,c0000003-0000-0000-0000-000000000003,assistant,"¡Genial, Carlos! La inscripción es en línea: llenas un formulario con tu nombre, carrera y correo. ¿Te paso el enlace?",36,2026-06-06 23:38:05.505111+00
+9,c0000003-0000-0000-0000-000000000003,user,Sí por favor,4,2026-06-06 23:38:05.505111+00
+10,c0000003-0000-0000-0000-000000000003,assistant,"Perfecto. Apenas completes el formulario, recibirás un correo de bienvenida con los siguientes pasos.",28,2026-06-06 23:38:05.505111+00
+11,c0000004-0000-0000-0000-000000000004,user,¿En qué proyectos están trabajando ahora?,11,2026-06-06 23:38:05.505111+00
+12,c0000004-0000-0000-0000-000000000004,assistant,"Actualmente tenemos un chatbot a costo cero, un brazo robótico y una app de monitoreo ambiental. ¿Alguno te interesa para participar?",40,2026-06-06 23:38:05.505111+00
+13,c0000005-0000-0000-0000-000000000005,user,¿Qué requisitos piden para entrar?,10,2026-06-06 23:38:05.505111+00
+14,c0000005-0000-0000-0000-000000000005,assistant,"Solo necesitas ser estudiante activo y tener ganas de aprender. No se requiere experiencia previa, Diego.",31,2026-06-06 23:38:05.505111+00
+15,c0000006-0000-0000-0000-000000000006,user,¿Hay eventos esta semana?,8,2026-06-06 23:38:05.505111+00
+16,c0000006-0000-0000-0000-000000000006,assistant,"¡Sí, Valeria! El viernes hay una charla de inteligencia artificial a las 5 p. m. y un hackathon el sábado. ¿Quieres que te recuerde?",42,2026-06-06 23:38:05.505111+00
+17,436c533a-9263-41f0-82ef-7bad9b0d0b6f,user,¿Cómo me inscribo a un programa?,11,2026-05-18 23:45:57.635829+00
+18,436c533a-9263-41f0-82ef-7bad9b0d0b6f,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,32,2026-05-18 23:46:57.635829+00
+19,436c533a-9263-41f0-82ef-7bad9b0d0b6f,user,¿Cómo me inscribo a un programa?,11,2026-05-18 23:47:57.635829+00
+20,436c533a-9263-41f0-82ef-7bad9b0d0b6f,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,34,2026-05-18 23:48:57.635829+00
+21,436c533a-9263-41f0-82ef-7bad9b0d0b6f,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-05-18 23:49:57.635829+00
+22,436c533a-9263-41f0-82ef-7bad9b0d0b6f,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,41,2026-05-18 23:50:57.635829+00
+23,61c8d23b-e923-43b8-8f7b-407f29e90255,user,¿Cuánto cuesta el curso de gestión de calidad?,8,2026-06-01 23:45:57.635829+00
+24,61c8d23b-e923-43b8-8f7b-407f29e90255,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,40,2026-06-01 23:46:57.635829+00
+25,61c8d23b-e923-43b8-8f7b-407f29e90255,user,¿El certificado es a nombre de la UNI?,13,2026-06-01 23:47:57.635829+00
+26,61c8d23b-e923-43b8-8f7b-407f29e90255,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",38,2026-06-01 23:48:57.635829+00
+27,61c8d23b-e923-43b8-8f7b-407f29e90255,user,¿Las clases son virtuales o presenciales?,10,2026-06-01 23:49:57.635829+00
+28,61c8d23b-e923-43b8-8f7b-407f29e90255,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-06-01 23:50:57.635829+00
+29,c0b343a9-edb0-4390-82d1-d91bb2e1520f,user,¿Qué es el CEE?,10,2026-05-29 23:45:57.635829+00
+30,c0b343a9-edb0-4390-82d1-d91bb2e1520f,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",38,2026-05-29 23:46:57.635829+00
+31,81e4884b-e144-403d-bf4a-7e30f75c2439,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-06-06 23:45:57.635829+00
+32,81e4884b-e144-403d-bf4a-7e30f75c2439,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,29,2026-06-06 23:46:57.635829+00
+33,c993e672-75da-4032-8c08-680c7a656708,user,¿Cómo me inscribo a un programa?,12,2026-05-14 23:45:57.635829+00
+34,c993e672-75da-4032-8c08-680c7a656708,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,44,2026-05-14 23:46:57.635829+00
+35,6052dd79-fbc8-461f-a001-380baba8cbc5,user,¿Tienen cursos de logística y procesos?,13,2026-05-29 23:45:57.635829+00
+36,6052dd79-fbc8-461f-a001-380baba8cbc5,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",25,2026-05-29 23:46:57.635829+00
+37,6052dd79-fbc8-461f-a001-380baba8cbc5,user,¿Qué es el CEE?,8,2026-05-29 23:47:57.635829+00
+38,6052dd79-fbc8-461f-a001-380baba8cbc5,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",29,2026-05-29 23:48:57.635829+00
+39,6052dd79-fbc8-461f-a001-380baba8cbc5,user,¿Las clases son virtuales o presenciales?,11,2026-05-29 23:49:57.635829+00
+40,6052dd79-fbc8-461f-a001-380baba8cbc5,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,37,2026-05-29 23:50:57.635829+00
+41,851ca514-f33b-4402-922b-07ac5dae4f72,user,¿Qué cursos de especialización tienen?,11,2026-06-01 23:45:57.635829+00
+42,851ca514-f33b-4402-922b-07ac5dae4f72,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",44,2026-06-01 23:46:57.635829+00
+43,851ca514-f33b-4402-922b-07ac5dae4f72,user,¿Cuándo empieza el curso de SSOMA?,14,2026-06-01 23:47:57.635829+00
+44,851ca514-f33b-4402-922b-07ac5dae4f72,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",31,2026-06-01 23:48:57.635829+00
+45,f9d23a14-0349-47b6-aef0-e0d48da92f24,user,¿Cuándo empieza el curso de SSOMA?,10,2026-06-02 23:45:57.635829+00
+46,f9d23a14-0349-47b6-aef0-e0d48da92f24,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",44,2026-06-02 23:46:57.635829+00
+47,1f9ae857-3bd4-4b60-b86b-899433ff52b8,user,¿Cuánto cuesta el curso de gestión de calidad?,13,2026-05-15 23:45:57.635829+00
+48,1f9ae857-3bd4-4b60-b86b-899433ff52b8,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,32,2026-05-15 23:46:57.635829+00
+49,1f9ae857-3bd4-4b60-b86b-899433ff52b8,user,¿Tienen cursos de logística y procesos?,15,2026-05-15 23:47:57.635829+00
+50,1f9ae857-3bd4-4b60-b86b-899433ff52b8,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-05-15 23:48:57.635829+00
+51,1f9ae857-3bd4-4b60-b86b-899433ff52b8,user,¿El certificado es a nombre de la UNI?,13,2026-05-15 23:49:57.635829+00
+52,1f9ae857-3bd4-4b60-b86b-899433ff52b8,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",30,2026-05-15 23:50:57.635829+00
+53,ed2fc207-6447-4dd4-85ef-e8f37960f7a0,user,¿Cuándo empieza el curso de SSOMA?,14,2026-05-14 23:45:57.635829+00
+54,ed2fc207-6447-4dd4-85ef-e8f37960f7a0,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",39,2026-05-14 23:46:57.635829+00
+55,ed2fc207-6447-4dd4-85ef-e8f37960f7a0,user,¿Cómo me inscribo a un programa?,13,2026-05-14 23:47:57.635829+00
+56,ed2fc207-6447-4dd4-85ef-e8f37960f7a0,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,32,2026-05-14 23:48:57.635829+00
+57,0448ddbc-b6aa-4196-80b2-af4830c55911,user,¿Tienen cursos de logística y procesos?,14,2026-05-31 23:45:57.635829+00
+58,0448ddbc-b6aa-4196-80b2-af4830c55911,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",43,2026-05-31 23:46:57.635829+00
+59,0448ddbc-b6aa-4196-80b2-af4830c55911,user,¿Cuánto cuesta el curso de gestión de calidad?,9,2026-05-31 23:47:57.635829+00
+60,0448ddbc-b6aa-4196-80b2-af4830c55911,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,42,2026-05-31 23:48:57.635829+00
+61,0448ddbc-b6aa-4196-80b2-af4830c55911,user,¿Las clases son virtuales o presenciales?,11,2026-05-31 23:49:57.635829+00
+62,0448ddbc-b6aa-4196-80b2-af4830c55911,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,39,2026-05-31 23:50:57.635829+00
+63,8d125f44-e93b-438f-afec-f9eb67301426,user,¿Tienen cursos de logística y procesos?,10,2026-05-31 23:45:57.635829+00
+64,8d125f44-e93b-438f-afec-f9eb67301426,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",30,2026-05-31 23:46:57.635829+00
+65,8d125f44-e93b-438f-afec-f9eb67301426,user,¿Qué cursos de especialización tienen?,9,2026-05-31 23:47:57.635829+00
+66,8d125f44-e93b-438f-afec-f9eb67301426,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",27,2026-05-31 23:48:57.635829+00
+67,8d125f44-e93b-438f-afec-f9eb67301426,user,¿Qué cursos de especialización tienen?,12,2026-05-31 23:49:57.635829+00
+68,8d125f44-e93b-438f-afec-f9eb67301426,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",30,2026-05-31 23:50:57.635829+00
+69,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,user,¿Cómo me inscribo a un programa?,10,2026-05-31 23:45:57.635829+00
+70,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,34,2026-05-31 23:46:57.635829+00
+71,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,user,¿Qué es el CEE?,11,2026-05-31 23:47:57.635829+00
+72,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",29,2026-05-31 23:48:57.635829+00
+73,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,user,¿Tienen cursos de logística y procesos?,8,2026-05-31 23:49:57.635829+00
+74,faf1e5e5-19ac-4a32-86d7-80fb6edd9ac2,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",42,2026-05-31 23:50:57.635829+00
+75,337c42b4-502a-4079-b2cd-afa7683fce63,user,¿El certificado es a nombre de la UNI?,15,2026-05-14 23:45:57.635829+00
+76,337c42b4-502a-4079-b2cd-afa7683fce63,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",30,2026-05-14 23:46:57.635829+00
+77,337c42b4-502a-4079-b2cd-afa7683fce63,user,¿Qué cursos de especialización tienen?,11,2026-05-14 23:47:57.635829+00
+78,337c42b4-502a-4079-b2cd-afa7683fce63,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",44,2026-05-14 23:48:57.635829+00
+79,5e753339-e23f-438c-9bae-e69ad9eee3ca,user,¿El certificado es a nombre de la UNI?,12,2026-06-01 23:45:57.635829+00
+80,5e753339-e23f-438c-9bae-e69ad9eee3ca,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",38,2026-06-01 23:46:57.635829+00
+81,5e753339-e23f-438c-9bae-e69ad9eee3ca,user,¿Cuánto cuesta el curso de gestión de calidad?,11,2026-06-01 23:47:57.635829+00
+82,5e753339-e23f-438c-9bae-e69ad9eee3ca,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,35,2026-06-01 23:48:57.635829+00
+83,5e753339-e23f-438c-9bae-e69ad9eee3ca,user,¿Qué cursos de especialización tienen?,11,2026-06-01 23:49:57.635829+00
+84,5e753339-e23f-438c-9bae-e69ad9eee3ca,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",42,2026-06-01 23:50:57.635829+00
+85,6a41004a-4b01-47c8-86dd-a8918ec689c8,user,¿Cómo me inscribo a un programa?,10,2026-05-18 23:45:57.635829+00
+86,6a41004a-4b01-47c8-86dd-a8918ec689c8,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,25,2026-05-18 23:46:57.635829+00
+87,6a41004a-4b01-47c8-86dd-a8918ec689c8,user,¿El certificado es a nombre de la UNI?,8,2026-05-18 23:47:57.635829+00
+88,6a41004a-4b01-47c8-86dd-a8918ec689c8,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",44,2026-05-18 23:48:57.635829+00
+89,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,user,¿El certificado es a nombre de la UNI?,15,2026-05-22 23:45:57.635829+00
+90,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",36,2026-05-22 23:46:57.635829+00
+91,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,user,¿El certificado es a nombre de la UNI?,11,2026-05-22 23:47:57.635829+00
+92,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",44,2026-05-22 23:48:57.635829+00
+93,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,user,¿Tienen cursos de logística y procesos?,8,2026-05-22 23:49:57.635829+00
+94,f10067ab-4c18-4c94-b370-9dcf8b8b43e6,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",27,2026-05-22 23:50:57.635829+00
+95,1430164b-1adc-41ad-b98c-e9740600badd,user,¿Las clases son virtuales o presenciales?,11,2026-05-21 23:45:57.635829+00
+96,1430164b-1adc-41ad-b98c-e9740600badd,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,28,2026-05-21 23:46:57.635829+00
+97,1430164b-1adc-41ad-b98c-e9740600badd,user,¿Cómo me inscribo a un programa?,14,2026-05-21 23:47:57.635829+00
+98,1430164b-1adc-41ad-b98c-e9740600badd,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,42,2026-05-21 23:48:57.635829+00
+99,1430164b-1adc-41ad-b98c-e9740600badd,user,¿Qué cursos de especialización tienen?,14,2026-05-21 23:49:57.635829+00
+100,1430164b-1adc-41ad-b98c-e9740600badd,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",26,2026-05-21 23:50:57.635829+00
+101,ba86cef1-0d15-4ff0-b611-7e153dd71415,user,¿Las clases son virtuales o presenciales?,9,2026-05-15 23:45:57.635829+00
+102,ba86cef1-0d15-4ff0-b611-7e153dd71415,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,30,2026-05-15 23:46:57.635829+00
+103,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,user,¿Cuánto cuesta el curso de gestión de calidad?,12,2026-05-13 23:45:57.635829+00
+104,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,29,2026-05-13 23:46:57.635829+00
+105,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,user,¿Las clases son virtuales o presenciales?,8,2026-05-13 23:47:57.635829+00
+261,40814d29-383c-4238-a17e-f789140f0a17,user,¿Cómo me inscribo a un programa?,8,2026-05-30 23:50:48.357148+00
+106,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,42,2026-05-13 23:48:57.635829+00
+107,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,user,¿Tienen cursos de logística y procesos?,14,2026-05-13 23:49:57.635829+00
+108,d8f7fcc0-139b-40a5-b44c-176e4f2c08d6,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",37,2026-05-13 23:50:57.635829+00
+109,7b601bfa-d0da-4380-b81e-d0935de7ef6c,user,¿El certificado es a nombre de la UNI?,13,2026-06-03 23:45:57.635829+00
+110,7b601bfa-d0da-4380-b81e-d0935de7ef6c,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",43,2026-06-03 23:46:57.635829+00
+111,7b601bfa-d0da-4380-b81e-d0935de7ef6c,user,¿Qué cursos de especialización tienen?,12,2026-06-03 23:47:57.635829+00
+112,7b601bfa-d0da-4380-b81e-d0935de7ef6c,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",38,2026-06-03 23:48:57.635829+00
+113,3f2e4803-3d43-461a-9062-a3fd476cdd12,user,¿Cómo me inscribo a un programa?,8,2026-05-21 23:45:57.635829+00
+114,3f2e4803-3d43-461a-9062-a3fd476cdd12,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,36,2026-05-21 23:46:57.635829+00
+115,3f2e4803-3d43-461a-9062-a3fd476cdd12,user,¿Qué es el CEE?,15,2026-05-21 23:47:57.635829+00
+116,3f2e4803-3d43-461a-9062-a3fd476cdd12,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",34,2026-05-21 23:48:57.635829+00
+117,3f2e4803-3d43-461a-9062-a3fd476cdd12,user,¿Cómo me inscribo a un programa?,9,2026-05-21 23:49:57.635829+00
+118,3f2e4803-3d43-461a-9062-a3fd476cdd12,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,32,2026-05-21 23:50:57.635829+00
+119,a74602c4-7e0f-4372-a2d6-8e2469195143,user,¿Las clases son virtuales o presenciales?,8,2026-05-22 23:45:57.635829+00
+120,a74602c4-7e0f-4372-a2d6-8e2469195143,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,36,2026-05-22 23:46:57.635829+00
+121,a74602c4-7e0f-4372-a2d6-8e2469195143,user,¿Qué es el CEE?,12,2026-05-22 23:47:57.635829+00
+122,a74602c4-7e0f-4372-a2d6-8e2469195143,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",26,2026-05-22 23:48:57.635829+00
+123,67cab524-c4df-4719-9d9e-a895e9ab45c9,user,¿Cuándo empieza el curso de SSOMA?,13,2026-05-30 23:45:57.635829+00
+124,67cab524-c4df-4719-9d9e-a895e9ab45c9,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",43,2026-05-30 23:46:57.635829+00
+125,67cab524-c4df-4719-9d9e-a895e9ab45c9,user,¿Cómo me inscribo a un programa?,14,2026-05-30 23:47:57.635829+00
+126,67cab524-c4df-4719-9d9e-a895e9ab45c9,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,39,2026-05-30 23:48:57.635829+00
+127,e073ab8b-e026-4048-b329-9e426154a756,user,¿Qué cursos de especialización tienen?,14,2026-05-27 23:45:57.635829+00
+128,e073ab8b-e026-4048-b329-9e426154a756,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",40,2026-05-27 23:46:57.635829+00
+129,e073ab8b-e026-4048-b329-9e426154a756,user,¿Qué cursos de especialización tienen?,15,2026-05-27 23:47:57.635829+00
+130,e073ab8b-e026-4048-b329-9e426154a756,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",30,2026-05-27 23:48:57.635829+00
+131,e073ab8b-e026-4048-b329-9e426154a756,user,¿Qué es el CEE?,8,2026-05-27 23:49:57.635829+00
+132,e073ab8b-e026-4048-b329-9e426154a756,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",29,2026-05-27 23:50:57.635829+00
+133,5c5eef8d-45cc-49cd-9985-a3f21cd42d5e,user,¿Qué es el CEE?,13,2026-05-25 23:45:57.635829+00
+134,5c5eef8d-45cc-49cd-9985-a3f21cd42d5e,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",35,2026-05-25 23:46:57.635829+00
+135,9811ed99-3e9d-402e-9efc-5f9c3f6bd857,user,¿Cuánto cuesta el curso de gestión de calidad?,12,2026-05-13 23:45:57.635829+00
+136,9811ed99-3e9d-402e-9efc-5f9c3f6bd857,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,40,2026-05-13 23:46:57.635829+00
+137,2895b529-b519-48d9-be55-5822bae00386,user,¿Cómo me inscribo a un programa?,12,2026-05-15 23:45:57.635829+00
+138,2895b529-b519-48d9-be55-5822bae00386,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,31,2026-05-15 23:46:57.635829+00
+139,2895b529-b519-48d9-be55-5822bae00386,user,¿El certificado es a nombre de la UNI?,15,2026-05-15 23:47:57.635829+00
+140,2895b529-b519-48d9-be55-5822bae00386,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",28,2026-05-15 23:48:57.635829+00
+141,2895b529-b519-48d9-be55-5822bae00386,user,¿Cuánto cuesta el curso de gestión de calidad?,9,2026-05-15 23:49:57.635829+00
+142,2895b529-b519-48d9-be55-5822bae00386,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,41,2026-05-15 23:50:57.635829+00
+143,33a6a988-7d25-4e60-b941-e81745cf1336,user,¿Qué es el CEE?,9,2026-05-18 23:45:57.635829+00
+144,33a6a988-7d25-4e60-b941-e81745cf1336,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",39,2026-05-18 23:46:57.635829+00
+145,33a6a988-7d25-4e60-b941-e81745cf1336,user,¿Cómo me inscribo a un programa?,11,2026-05-18 23:47:57.635829+00
+146,33a6a988-7d25-4e60-b941-e81745cf1336,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,32,2026-05-18 23:48:57.635829+00
+147,ba7f1925-180c-4025-b100-eb73a1b151fc,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-06-06 23:45:57.635829+00
+148,ba7f1925-180c-4025-b100-eb73a1b151fc,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,44,2026-06-06 23:46:57.635829+00
+149,ba7f1925-180c-4025-b100-eb73a1b151fc,user,¿Qué es el CEE?,15,2026-06-06 23:47:57.635829+00
+150,ba7f1925-180c-4025-b100-eb73a1b151fc,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",40,2026-06-06 23:48:57.635829+00
+151,36d0f093-efa2-4f23-92b0-cb4d51c66a43,user,¿Cuánto cuesta el curso de gestión de calidad?,12,2026-05-24 23:46:48.357148+00
+152,36d0f093-efa2-4f23-92b0-cb4d51c66a43,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,39,2026-05-24 23:47:48.357148+00
+153,75b40fda-8201-4433-9f14-19ae614f9759,user,¿Cómo me inscribo a un programa?,15,2026-05-15 23:46:48.357148+00
+154,75b40fda-8201-4433-9f14-19ae614f9759,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,40,2026-05-15 23:47:48.357148+00
+155,75b40fda-8201-4433-9f14-19ae614f9759,user,¿Cómo me inscribo a un programa?,9,2026-05-15 23:48:48.357148+00
+315,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,user,¿Cuánto cuesta el curso de gestión de calidad?,13,2026-05-30 23:49:01.770062+00
+156,75b40fda-8201-4433-9f14-19ae614f9759,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,38,2026-05-15 23:49:48.357148+00
+157,b7c7c446-c491-4e9b-ac33-9b58968bc367,user,¿Cuánto cuesta el curso de gestión de calidad?,11,2026-06-02 23:46:48.357148+00
+158,b7c7c446-c491-4e9b-ac33-9b58968bc367,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,28,2026-06-02 23:47:48.357148+00
+159,b7c7c446-c491-4e9b-ac33-9b58968bc367,user,¿Qué es el CEE?,9,2026-06-02 23:48:48.357148+00
+160,b7c7c446-c491-4e9b-ac33-9b58968bc367,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",38,2026-06-02 23:49:48.357148+00
+161,b7c7c446-c491-4e9b-ac33-9b58968bc367,user,¿Qué cursos de especialización tienen?,14,2026-06-02 23:50:48.357148+00
+162,b7c7c446-c491-4e9b-ac33-9b58968bc367,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",36,2026-06-02 23:51:48.357148+00
+163,b651a5ff-225c-4632-adb0-f0d624796149,user,¿Cuándo empieza el curso de SSOMA?,13,2026-06-02 23:46:48.357148+00
+164,b651a5ff-225c-4632-adb0-f0d624796149,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",25,2026-06-02 23:47:48.357148+00
+165,b651a5ff-225c-4632-adb0-f0d624796149,user,¿Cómo me inscribo a un programa?,10,2026-06-02 23:48:48.357148+00
+166,b651a5ff-225c-4632-adb0-f0d624796149,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,42,2026-06-02 23:49:48.357148+00
+167,cbc265cc-be89-4bb2-8cf5-21424a4e381f,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-05-15 23:46:48.357148+00
+168,cbc265cc-be89-4bb2-8cf5-21424a4e381f,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,26,2026-05-15 23:47:48.357148+00
+169,cbc265cc-be89-4bb2-8cf5-21424a4e381f,user,¿Las clases son virtuales o presenciales?,9,2026-05-15 23:48:48.357148+00
+170,cbc265cc-be89-4bb2-8cf5-21424a4e381f,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,34,2026-05-15 23:49:48.357148+00
+171,cbc265cc-be89-4bb2-8cf5-21424a4e381f,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-05-15 23:50:48.357148+00
+172,cbc265cc-be89-4bb2-8cf5-21424a4e381f,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,30,2026-05-15 23:51:48.357148+00
+173,323df8c4-b744-425f-9eea-cd9b8c8ded5f,user,¿Qué es el CEE?,14,2026-05-31 23:46:48.357148+00
+174,323df8c4-b744-425f-9eea-cd9b8c8ded5f,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",32,2026-05-31 23:47:48.357148+00
+175,323df8c4-b744-425f-9eea-cd9b8c8ded5f,user,¿Qué es el CEE?,8,2026-05-31 23:48:48.357148+00
+176,323df8c4-b744-425f-9eea-cd9b8c8ded5f,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",35,2026-05-31 23:49:48.357148+00
+177,463246c9-3e1b-4166-affc-14948129df48,user,¿Las clases son virtuales o presenciales?,14,2026-05-28 23:46:48.357148+00
+178,463246c9-3e1b-4166-affc-14948129df48,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,43,2026-05-28 23:47:48.357148+00
+179,463246c9-3e1b-4166-affc-14948129df48,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-05-28 23:48:48.357148+00
+180,463246c9-3e1b-4166-affc-14948129df48,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,30,2026-05-28 23:49:48.357148+00
+181,463246c9-3e1b-4166-affc-14948129df48,user,¿Tienen cursos de logística y procesos?,11,2026-05-28 23:50:48.357148+00
+182,463246c9-3e1b-4166-affc-14948129df48,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-05-28 23:51:48.357148+00
+183,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,user,¿Qué es el CEE?,9,2026-05-13 23:46:48.357148+00
+184,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",38,2026-05-13 23:47:48.357148+00
+185,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,user,¿Tienen cursos de logística y procesos?,15,2026-05-13 23:48:48.357148+00
+186,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",34,2026-05-13 23:49:48.357148+00
+187,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,user,¿Cuándo empieza el curso de SSOMA?,8,2026-05-13 23:50:48.357148+00
+188,ee7806db-4b21-4d87-a3ac-957ac15bd4e2,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",36,2026-05-13 23:51:48.357148+00
+189,733f2e90-27ce-4020-83d2-881be5e1d738,user,¿Cómo me inscribo a un programa?,9,2026-06-02 23:46:48.357148+00
+190,733f2e90-27ce-4020-83d2-881be5e1d738,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,36,2026-06-02 23:47:48.357148+00
+191,733f2e90-27ce-4020-83d2-881be5e1d738,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-06-02 23:48:48.357148+00
+192,733f2e90-27ce-4020-83d2-881be5e1d738,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,33,2026-06-02 23:49:48.357148+00
+193,733f2e90-27ce-4020-83d2-881be5e1d738,user,¿Cuándo empieza el curso de SSOMA?,14,2026-06-02 23:50:48.357148+00
+194,733f2e90-27ce-4020-83d2-881be5e1d738,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",33,2026-06-02 23:51:48.357148+00
+195,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,user,¿Cuánto cuesta el curso de gestión de calidad?,11,2026-05-28 23:46:48.357148+00
+196,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,25,2026-05-28 23:47:48.357148+00
+197,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,user,¿Cuánto cuesta el curso de gestión de calidad?,13,2026-05-28 23:48:48.357148+00
+198,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,35,2026-05-28 23:49:48.357148+00
+199,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,user,¿El certificado es a nombre de la UNI?,11,2026-05-28 23:50:48.357148+00
+200,5da8ba9d-dddb-44e0-b955-0d8763a4f1cc,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",38,2026-05-28 23:51:48.357148+00
+201,ee611ac4-c5f0-4186-8a67-33a0b264e482,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-05-22 23:46:48.357148+00
+202,ee611ac4-c5f0-4186-8a67-33a0b264e482,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,28,2026-05-22 23:47:48.357148+00
+203,ee611ac4-c5f0-4186-8a67-33a0b264e482,user,¿Las clases son virtuales o presenciales?,11,2026-05-22 23:48:48.357148+00
+204,ee611ac4-c5f0-4186-8a67-33a0b264e482,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-05-22 23:49:48.357148+00
+205,0a8a175d-b23b-4028-868a-8b956546025b,user,¿Tienen cursos de logística y procesos?,14,2026-05-27 23:46:48.357148+00
+206,0a8a175d-b23b-4028-868a-8b956546025b,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",43,2026-05-27 23:47:48.357148+00
+207,a99cfa05-5610-431b-a012-20a990831839,user,¿Cuándo empieza el curso de SSOMA?,12,2026-05-20 23:46:48.357148+00
+208,a99cfa05-5610-431b-a012-20a990831839,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",37,2026-05-20 23:47:48.357148+00
+209,a99cfa05-5610-431b-a012-20a990831839,user,¿Tienen cursos de logística y procesos?,8,2026-05-20 23:48:48.357148+00
+210,a99cfa05-5610-431b-a012-20a990831839,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-05-20 23:49:48.357148+00
+211,a99cfa05-5610-431b-a012-20a990831839,user,¿El certificado es a nombre de la UNI?,10,2026-05-20 23:50:48.357148+00
+212,a99cfa05-5610-431b-a012-20a990831839,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",36,2026-05-20 23:51:48.357148+00
+213,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,user,¿Cómo me inscribo a un programa?,10,2026-06-01 23:46:48.357148+00
+214,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,29,2026-06-01 23:47:48.357148+00
+215,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,user,¿Cuándo empieza el curso de SSOMA?,13,2026-06-01 23:48:48.357148+00
+216,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",34,2026-06-01 23:49:48.357148+00
+217,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,user,¿Cómo me inscribo a un programa?,8,2026-06-01 23:50:48.357148+00
+218,a50ab637-b4cb-49ac-bbe4-bef1077c13bd,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,27,2026-06-01 23:51:48.357148+00
+219,8987cf7a-c6db-46ec-bb51-0fea6d7f2029,user,¿Cuánto cuesta el curso de gestión de calidad?,15,2026-05-18 23:46:48.357148+00
+220,8987cf7a-c6db-46ec-bb51-0fea6d7f2029,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,29,2026-05-18 23:47:48.357148+00
+221,e5b66946-0770-4f6d-9107-5e2286426fca,user,¿Cómo me inscribo a un programa?,12,2026-05-24 23:46:48.357148+00
+222,e5b66946-0770-4f6d-9107-5e2286426fca,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,25,2026-05-24 23:47:48.357148+00
+223,e5b66946-0770-4f6d-9107-5e2286426fca,user,¿Las clases son virtuales o presenciales?,9,2026-05-24 23:48:48.357148+00
+224,e5b66946-0770-4f6d-9107-5e2286426fca,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-05-24 23:49:48.357148+00
+225,30ea8c62-5f66-43b2-9ea8-534c1cd6d881,user,¿Cuándo empieza el curso de SSOMA?,9,2026-05-30 23:46:48.357148+00
+226,30ea8c62-5f66-43b2-9ea8-534c1cd6d881,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",37,2026-05-30 23:47:48.357148+00
+227,e97c150e-b9e9-4c5d-9cc2-7c254cfaac04,user,¿Las clases son virtuales o presenciales?,14,2026-05-17 23:46:48.357148+00
+228,e97c150e-b9e9-4c5d-9cc2-7c254cfaac04,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,43,2026-05-17 23:47:48.357148+00
+229,75da7fd5-1fdb-4519-bd81-0b95ff7fd1c3,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-05-13 23:46:48.357148+00
+230,75da7fd5-1fdb-4519-bd81-0b95ff7fd1c3,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,44,2026-05-13 23:47:48.357148+00
+231,75da7fd5-1fdb-4519-bd81-0b95ff7fd1c3,user,¿Tienen cursos de logística y procesos?,11,2026-05-13 23:48:48.357148+00
+232,75da7fd5-1fdb-4519-bd81-0b95ff7fd1c3,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",37,2026-05-13 23:49:48.357148+00
+233,68c9561a-f679-42cc-891f-6801a0475b3a,user,¿Tienen cursos de logística y procesos?,12,2026-05-31 23:46:48.357148+00
+234,68c9561a-f679-42cc-891f-6801a0475b3a,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-05-31 23:47:48.357148+00
+235,8b3ceb18-19d6-471a-85e5-d39c76c4d699,user,¿El certificado es a nombre de la UNI?,15,2026-05-25 23:46:48.357148+00
+236,8b3ceb18-19d6-471a-85e5-d39c76c4d699,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",34,2026-05-25 23:47:48.357148+00
+237,4225813d-71a7-4e8d-af2b-e86513fbcf23,user,¿Las clases son virtuales o presenciales?,15,2026-05-28 23:46:48.357148+00
+238,4225813d-71a7-4e8d-af2b-e86513fbcf23,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,36,2026-05-28 23:47:48.357148+00
+239,4225813d-71a7-4e8d-af2b-e86513fbcf23,user,¿Cuándo empieza el curso de SSOMA?,11,2026-05-28 23:48:48.357148+00
+240,4225813d-71a7-4e8d-af2b-e86513fbcf23,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",34,2026-05-28 23:49:48.357148+00
+241,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,user,¿Tienen cursos de logística y procesos?,9,2026-05-13 23:46:48.357148+00
+242,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",32,2026-05-13 23:47:48.357148+00
+243,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,user,¿Las clases son virtuales o presenciales?,14,2026-05-13 23:48:48.357148+00
+244,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,25,2026-05-13 23:49:48.357148+00
+245,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,user,¿Qué es el CEE?,13,2026-05-13 23:50:48.357148+00
+246,c5cdafe1-7f8a-48e8-9f2e-06362efe410a,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",26,2026-05-13 23:51:48.357148+00
+247,c1380e4f-5b03-4101-be51-7b7022fa4325,user,¿Cuánto cuesta el curso de gestión de calidad?,9,2026-05-29 23:46:48.357148+00
+248,c1380e4f-5b03-4101-be51-7b7022fa4325,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,41,2026-05-29 23:47:48.357148+00
+249,c1380e4f-5b03-4101-be51-7b7022fa4325,user,¿Qué cursos de especialización tienen?,9,2026-05-29 23:48:48.357148+00
+250,c1380e4f-5b03-4101-be51-7b7022fa4325,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",44,2026-05-29 23:49:48.357148+00
+251,d8794f54-a1da-48ee-a5f1-3200ea0f4719,user,¿Tienen cursos de logística y procesos?,8,2026-05-29 23:46:48.357148+00
+252,d8794f54-a1da-48ee-a5f1-3200ea0f4719,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",44,2026-05-29 23:47:48.357148+00
+253,d8794f54-a1da-48ee-a5f1-3200ea0f4719,user,¿Cuánto cuesta el curso de gestión de calidad?,8,2026-05-29 23:48:48.357148+00
+254,d8794f54-a1da-48ee-a5f1-3200ea0f4719,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,44,2026-05-29 23:49:48.357148+00
+255,30508544-19e1-4db7-800d-bf3b577a0303,user,¿Qué cursos de especialización tienen?,11,2026-05-25 23:46:48.357148+00
+256,30508544-19e1-4db7-800d-bf3b577a0303,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",39,2026-05-25 23:47:48.357148+00
+257,40814d29-383c-4238-a17e-f789140f0a17,user,¿Tienen cursos de logística y procesos?,14,2026-05-30 23:46:48.357148+00
+258,40814d29-383c-4238-a17e-f789140f0a17,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",32,2026-05-30 23:47:48.357148+00
+259,40814d29-383c-4238-a17e-f789140f0a17,user,¿Cómo me inscribo a un programa?,15,2026-05-30 23:48:48.357148+00
+260,40814d29-383c-4238-a17e-f789140f0a17,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,34,2026-05-30 23:49:48.357148+00
+262,40814d29-383c-4238-a17e-f789140f0a17,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,38,2026-05-30 23:51:48.357148+00
+263,8b90925a-0006-4820-ab9c-6fc87aa57ff1,user,¿Cuándo empieza el curso de SSOMA?,15,2026-05-26 23:46:48.357148+00
+264,8b90925a-0006-4820-ab9c-6fc87aa57ff1,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",28,2026-05-26 23:47:48.357148+00
+265,8b90925a-0006-4820-ab9c-6fc87aa57ff1,user,¿El certificado es a nombre de la UNI?,13,2026-05-26 23:48:48.357148+00
+266,8b90925a-0006-4820-ab9c-6fc87aa57ff1,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",38,2026-05-26 23:49:48.357148+00
+267,b1203b1d-af35-4feb-bd14-974173ad28fb,user,¿Cómo me inscribo a un programa?,11,2026-05-30 23:46:48.357148+00
+268,b1203b1d-af35-4feb-bd14-974173ad28fb,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,25,2026-05-30 23:47:48.357148+00
+269,b1203b1d-af35-4feb-bd14-974173ad28fb,user,¿Las clases son virtuales o presenciales?,11,2026-05-30 23:48:48.357148+00
+270,b1203b1d-af35-4feb-bd14-974173ad28fb,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,39,2026-05-30 23:49:48.357148+00
+271,4656d1c8-80ac-4b41-a025-2d6e8fb66fb4,user,¿Las clases son virtuales o presenciales?,13,2026-05-16 23:46:48.357148+00
+272,4656d1c8-80ac-4b41-a025-2d6e8fb66fb4,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,28,2026-05-16 23:47:48.357148+00
+273,408da245-e7c3-49c5-be68-1dd29e6530d6,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-05-18 23:47:01.770062+00
+274,408da245-e7c3-49c5-be68-1dd29e6530d6,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,36,2026-05-18 23:48:01.770062+00
+275,408da245-e7c3-49c5-be68-1dd29e6530d6,user,¿Tienen cursos de logística y procesos?,13,2026-05-18 23:49:01.770062+00
+276,408da245-e7c3-49c5-be68-1dd29e6530d6,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",26,2026-05-18 23:50:01.770062+00
+277,408da245-e7c3-49c5-be68-1dd29e6530d6,user,¿Las clases son virtuales o presenciales?,8,2026-05-18 23:51:01.770062+00
+278,408da245-e7c3-49c5-be68-1dd29e6530d6,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-05-18 23:52:01.770062+00
+279,8124f2f1-9ebc-41b1-9dee-7b28267839a7,user,¿Cuándo empieza el curso de SSOMA?,8,2026-05-25 23:47:01.770062+00
+280,8124f2f1-9ebc-41b1-9dee-7b28267839a7,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",40,2026-05-25 23:48:01.770062+00
+281,a209f0c1-a63d-42fc-9f35-b7696d56783e,user,¿Tienen cursos de logística y procesos?,14,2026-05-13 23:47:01.770062+00
+282,a209f0c1-a63d-42fc-9f35-b7696d56783e,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",30,2026-05-13 23:48:01.770062+00
+283,f8dd357f-4f81-4b09-a45a-3997657e80e2,user,¿Cómo me inscribo a un programa?,15,2026-05-25 23:47:01.770062+00
+284,f8dd357f-4f81-4b09-a45a-3997657e80e2,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,25,2026-05-25 23:48:01.770062+00
+285,40c0856c-8740-436f-8ee2-bacba3c03203,user,¿Tienen cursos de logística y procesos?,12,2026-06-04 23:47:01.770062+00
+286,40c0856c-8740-436f-8ee2-bacba3c03203,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",28,2026-06-04 23:48:01.770062+00
+287,40c0856c-8740-436f-8ee2-bacba3c03203,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-06-04 23:49:01.770062+00
+288,40c0856c-8740-436f-8ee2-bacba3c03203,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,44,2026-06-04 23:50:01.770062+00
+289,40c0856c-8740-436f-8ee2-bacba3c03203,user,¿Cuándo empieza el curso de SSOMA?,8,2026-06-04 23:51:01.770062+00
+290,40c0856c-8740-436f-8ee2-bacba3c03203,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",31,2026-06-04 23:52:01.770062+00
+291,cad7eef6-44ff-454c-bfcd-28508dad7c9c,user,¿Qué es el CEE?,12,2026-05-25 23:47:01.770062+00
+292,cad7eef6-44ff-454c-bfcd-28508dad7c9c,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",40,2026-05-25 23:48:01.770062+00
+293,cad7eef6-44ff-454c-bfcd-28508dad7c9c,user,¿Cuándo empieza el curso de SSOMA?,11,2026-05-25 23:49:01.770062+00
+294,cad7eef6-44ff-454c-bfcd-28508dad7c9c,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",42,2026-05-25 23:50:01.770062+00
+295,cad7eef6-44ff-454c-bfcd-28508dad7c9c,user,¿El certificado es a nombre de la UNI?,8,2026-05-25 23:51:01.770062+00
+296,cad7eef6-44ff-454c-bfcd-28508dad7c9c,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",32,2026-05-25 23:52:01.770062+00
+297,7aebecbe-f9b8-437c-85f8-f29eadc440e1,user,¿Cómo me inscribo a un programa?,15,2026-05-30 23:47:01.770062+00
+298,7aebecbe-f9b8-437c-85f8-f29eadc440e1,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,34,2026-05-30 23:48:01.770062+00
+299,7aebecbe-f9b8-437c-85f8-f29eadc440e1,user,¿Las clases son virtuales o presenciales?,10,2026-05-30 23:49:01.770062+00
+300,7aebecbe-f9b8-437c-85f8-f29eadc440e1,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-05-30 23:50:01.770062+00
+301,c0000be9-16c2-48c2-af9c-a7137f946443,user,¿Qué es el CEE?,8,2026-06-01 23:47:01.770062+00
+302,c0000be9-16c2-48c2-af9c-a7137f946443,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",36,2026-06-01 23:48:01.770062+00
+303,c0000be9-16c2-48c2-af9c-a7137f946443,user,¿Cuándo empieza el curso de SSOMA?,8,2026-06-01 23:49:01.770062+00
+304,c0000be9-16c2-48c2-af9c-a7137f946443,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",38,2026-06-01 23:50:01.770062+00
+305,c0000be9-16c2-48c2-af9c-a7137f946443,user,¿Las clases son virtuales o presenciales?,10,2026-06-01 23:51:01.770062+00
+306,c0000be9-16c2-48c2-af9c-a7137f946443,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,38,2026-06-01 23:52:01.770062+00
+307,ae657f8d-68a2-4399-b41f-636e629508e4,user,¿El certificado es a nombre de la UNI?,15,2026-05-23 23:47:01.770062+00
+308,ae657f8d-68a2-4399-b41f-636e629508e4,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",34,2026-05-23 23:48:01.770062+00
+309,ad18d5f7-f739-44d2-b2c9-78c2a3e176ef,user,¿Cuándo empieza el curso de SSOMA?,10,2026-06-06 23:47:01.770062+00
+310,ad18d5f7-f739-44d2-b2c9-78c2a3e176ef,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",26,2026-06-06 23:48:01.770062+00
+311,ad18d5f7-f739-44d2-b2c9-78c2a3e176ef,user,¿Cuánto cuesta el curso de gestión de calidad?,13,2026-06-06 23:49:01.770062+00
+312,ad18d5f7-f739-44d2-b2c9-78c2a3e176ef,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,39,2026-06-06 23:50:01.770062+00
+313,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,user,¿Qué es el CEE?,10,2026-05-30 23:47:01.770062+00
+314,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",34,2026-05-30 23:48:01.770062+00
+316,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,39,2026-05-30 23:50:01.770062+00
+317,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,user,¿Cuánto cuesta el curso de gestión de calidad?,15,2026-05-30 23:51:01.770062+00
+318,22fc1f4e-37fe-4146-9b5f-04757a1e1cab,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,43,2026-05-30 23:52:01.770062+00
+319,808d1bab-7f84-44db-acd8-a7800782423a,user,¿Cómo me inscribo a un programa?,9,2026-06-01 23:47:01.770062+00
+320,808d1bab-7f84-44db-acd8-a7800782423a,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,44,2026-06-01 23:48:01.770062+00
+321,808d1bab-7f84-44db-acd8-a7800782423a,user,¿Cómo me inscribo a un programa?,13,2026-06-01 23:49:01.770062+00
+322,808d1bab-7f84-44db-acd8-a7800782423a,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,43,2026-06-01 23:50:01.770062+00
+323,1cfa3c95-df35-4bcf-80ac-9506240ecad8,user,¿Qué es el CEE?,15,2026-06-02 23:47:01.770062+00
+324,1cfa3c95-df35-4bcf-80ac-9506240ecad8,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",34,2026-06-02 23:48:01.770062+00
+325,1cfa3c95-df35-4bcf-80ac-9506240ecad8,user,¿Qué es el CEE?,14,2026-06-02 23:49:01.770062+00
+326,1cfa3c95-df35-4bcf-80ac-9506240ecad8,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",31,2026-06-02 23:50:01.770062+00
+327,1cfa3c95-df35-4bcf-80ac-9506240ecad8,user,¿Cuánto cuesta el curso de gestión de calidad?,13,2026-06-02 23:51:01.770062+00
+328,1cfa3c95-df35-4bcf-80ac-9506240ecad8,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,30,2026-06-02 23:52:01.770062+00
+329,72a9adeb-f72d-4564-b131-2c6f28466af2,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-06-06 23:47:01.770062+00
+330,72a9adeb-f72d-4564-b131-2c6f28466af2,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,25,2026-06-06 23:48:01.770062+00
+331,72a9adeb-f72d-4564-b131-2c6f28466af2,user,¿Qué es el CEE?,14,2026-06-06 23:49:01.770062+00
+332,72a9adeb-f72d-4564-b131-2c6f28466af2,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",34,2026-06-06 23:50:01.770062+00
+333,468f66a5-cc2c-4238-823f-ed8e2ad65dba,user,¿Qué es el CEE?,9,2026-06-06 23:47:01.770062+00
+334,468f66a5-cc2c-4238-823f-ed8e2ad65dba,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",42,2026-06-06 23:48:01.770062+00
+335,0060ed91-88b8-4be4-9e52-3d81c574531e,user,¿Cuándo empieza el curso de SSOMA?,13,2026-05-30 23:47:01.770062+00
+336,0060ed91-88b8-4be4-9e52-3d81c574531e,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",28,2026-05-30 23:48:01.770062+00
+337,da42696e-1974-43bd-9e5c-e9fd532c6390,user,¿Las clases son virtuales o presenciales?,9,2026-05-26 23:47:01.770062+00
+338,da42696e-1974-43bd-9e5c-e9fd532c6390,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-05-26 23:48:01.770062+00
+339,da42696e-1974-43bd-9e5c-e9fd532c6390,user,¿Qué es el CEE?,9,2026-05-26 23:49:01.770062+00
+340,da42696e-1974-43bd-9e5c-e9fd532c6390,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",41,2026-05-26 23:50:01.770062+00
+341,cfb3208a-d5cb-495f-b1a4-0293a7061547,user,¿Tienen cursos de logística y procesos?,8,2026-05-26 23:47:01.770062+00
+342,cfb3208a-d5cb-495f-b1a4-0293a7061547,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-05-26 23:48:01.770062+00
+343,e663004a-d404-4de1-bed2-b0005ccd54aa,user,¿Cuándo empieza el curso de SSOMA?,11,2026-05-21 23:47:01.770062+00
+344,e663004a-d404-4de1-bed2-b0005ccd54aa,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",25,2026-05-21 23:48:01.770062+00
+345,e663004a-d404-4de1-bed2-b0005ccd54aa,user,¿Qué cursos de especialización tienen?,9,2026-05-21 23:49:01.770062+00
+346,e663004a-d404-4de1-bed2-b0005ccd54aa,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",29,2026-05-21 23:50:01.770062+00
+347,e663004a-d404-4de1-bed2-b0005ccd54aa,user,¿Qué es el CEE?,10,2026-05-21 23:51:01.770062+00
+348,e663004a-d404-4de1-bed2-b0005ccd54aa,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",39,2026-05-21 23:52:01.770062+00
+349,2c868763-8ffb-4777-a28c-a0f239d324a6,user,¿Qué cursos de especialización tienen?,11,2026-05-25 23:47:01.770062+00
+350,2c868763-8ffb-4777-a28c-a0f239d324a6,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",37,2026-05-25 23:48:01.770062+00
+351,dab41246-1b95-47f1-a06f-f62512095ad1,user,¿Qué es el CEE?,13,2026-05-20 23:47:01.770062+00
+352,dab41246-1b95-47f1-a06f-f62512095ad1,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",34,2026-05-20 23:48:01.770062+00
+353,dab41246-1b95-47f1-a06f-f62512095ad1,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-05-20 23:49:01.770062+00
+354,dab41246-1b95-47f1-a06f-f62512095ad1,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,42,2026-05-20 23:50:01.770062+00
+355,a038c93c-2133-490e-b941-fe9f6d587dd0,user,¿El certificado es a nombre de la UNI?,13,2026-05-14 23:47:01.770062+00
+356,a038c93c-2133-490e-b941-fe9f6d587dd0,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",42,2026-05-14 23:48:01.770062+00
+357,a038c93c-2133-490e-b941-fe9f6d587dd0,user,¿Cuándo empieza el curso de SSOMA?,14,2026-05-14 23:49:01.770062+00
+358,a038c93c-2133-490e-b941-fe9f6d587dd0,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",41,2026-05-14 23:50:01.770062+00
+359,656543aa-0f1c-4462-89a9-61c83d086b60,user,¿El certificado es a nombre de la UNI?,10,2026-05-16 23:47:01.770062+00
+360,656543aa-0f1c-4462-89a9-61c83d086b60,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",35,2026-05-16 23:48:01.770062+00
+361,656543aa-0f1c-4462-89a9-61c83d086b60,user,¿Las clases son virtuales o presenciales?,12,2026-05-16 23:49:01.770062+00
+362,656543aa-0f1c-4462-89a9-61c83d086b60,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-05-16 23:50:01.770062+00
+363,656543aa-0f1c-4462-89a9-61c83d086b60,user,¿El certificado es a nombre de la UNI?,15,2026-05-16 23:51:01.770062+00
+364,656543aa-0f1c-4462-89a9-61c83d086b60,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",41,2026-05-16 23:52:01.770062+00
+365,177343d5-a1ff-46b4-a192-48fbbb48c58b,user,¿Las clases son virtuales o presenciales?,15,2026-06-05 23:47:01.770062+00
+366,177343d5-a1ff-46b4-a192-48fbbb48c58b,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,35,2026-06-05 23:48:01.770062+00
+367,177343d5-a1ff-46b4-a192-48fbbb48c58b,user,¿Tienen cursos de logística y procesos?,13,2026-06-05 23:49:01.770062+00
+368,177343d5-a1ff-46b4-a192-48fbbb48c58b,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",40,2026-06-05 23:50:01.770062+00
+369,e6bbb738-ba4c-4ca8-bad7-ba6c5059db2f,user,¿Qué cursos de especialización tienen?,8,2026-06-06 23:47:01.770062+00
+370,e6bbb738-ba4c-4ca8-bad7-ba6c5059db2f,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",30,2026-06-06 23:48:01.770062+00
+371,e6bbb738-ba4c-4ca8-bad7-ba6c5059db2f,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-06-06 23:49:01.770062+00
+372,e6bbb738-ba4c-4ca8-bad7-ba6c5059db2f,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,27,2026-06-06 23:50:01.770062+00
+373,51716b4d-6233-46a8-b781-28993b2aa0a6,user,¿Qué cursos de especialización tienen?,15,2026-05-23 23:47:01.770062+00
+374,51716b4d-6233-46a8-b781-28993b2aa0a6,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",40,2026-05-23 23:48:01.770062+00
+375,874332ad-ef0f-4c86-a186-0a64775175d1,user,¿Las clases son virtuales o presenciales?,8,2026-05-15 23:47:01.770062+00
+376,874332ad-ef0f-4c86-a186-0a64775175d1,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,32,2026-05-15 23:48:01.770062+00
+377,d8ac859d-f8ed-4f89-8156-02e7c55003a0,user,¿Las clases son virtuales o presenciales?,8,2026-05-28 23:47:01.770062+00
+378,d8ac859d-f8ed-4f89-8156-02e7c55003a0,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-05-28 23:48:01.770062+00
+379,7f346539-46ea-4412-9327-c2ce49b4d522,user,¿Las clases son virtuales o presenciales?,9,2026-05-14 23:47:01.770062+00
+380,7f346539-46ea-4412-9327-c2ce49b4d522,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,40,2026-05-14 23:48:01.770062+00
+381,7f346539-46ea-4412-9327-c2ce49b4d522,user,¿Qué es el CEE?,14,2026-05-14 23:49:01.770062+00
+382,7f346539-46ea-4412-9327-c2ce49b4d522,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",26,2026-05-14 23:50:01.770062+00
+383,19145be2-fe17-4650-bd87-c570abcdf68e,user,¿Cuándo empieza el curso de SSOMA?,12,2026-05-17 23:47:01.770062+00
+384,19145be2-fe17-4650-bd87-c570abcdf68e,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",28,2026-05-17 23:48:01.770062+00
+385,19145be2-fe17-4650-bd87-c570abcdf68e,user,¿Cómo me inscribo a un programa?,13,2026-05-17 23:49:01.770062+00
+386,19145be2-fe17-4650-bd87-c570abcdf68e,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,28,2026-05-17 23:50:01.770062+00
+387,19145be2-fe17-4650-bd87-c570abcdf68e,user,¿Cuánto cuesta el curso de gestión de calidad?,15,2026-05-17 23:51:01.770062+00
+388,19145be2-fe17-4650-bd87-c570abcdf68e,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,43,2026-05-17 23:52:01.770062+00
+389,a4e5ca98-650c-42e7-90dc-a2e0bc469f01,user,¿Cuándo empieza el curso de SSOMA?,14,2026-06-01 23:47:01.770062+00
+390,a4e5ca98-650c-42e7-90dc-a2e0bc469f01,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",35,2026-06-01 23:48:01.770062+00
+391,f7566e60-2942-4bfe-84f3-6c6d9407da4b,user,¿Cuándo empieza el curso de SSOMA?,10,2026-06-04 23:47:01.770062+00
+392,f7566e60-2942-4bfe-84f3-6c6d9407da4b,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",28,2026-06-04 23:48:01.770062+00
+393,f7566e60-2942-4bfe-84f3-6c6d9407da4b,user,¿Tienen cursos de logística y procesos?,13,2026-06-04 23:49:01.770062+00
+394,f7566e60-2942-4bfe-84f3-6c6d9407da4b,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",35,2026-06-04 23:50:01.770062+00
+395,0791fc41-c3b1-448f-b25c-bac46de2c953,user,¿Cuándo empieza el curso de SSOMA?,10,2026-05-13 23:47:01.770062+00
+396,0791fc41-c3b1-448f-b25c-bac46de2c953,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",34,2026-05-13 23:48:01.770062+00
+397,0791fc41-c3b1-448f-b25c-bac46de2c953,user,¿Cuándo empieza el curso de SSOMA?,14,2026-05-13 23:49:01.770062+00
+398,0791fc41-c3b1-448f-b25c-bac46de2c953,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",35,2026-05-13 23:50:01.770062+00
+399,0791fc41-c3b1-448f-b25c-bac46de2c953,user,¿El certificado es a nombre de la UNI?,15,2026-05-13 23:51:01.770062+00
+400,0791fc41-c3b1-448f-b25c-bac46de2c953,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",30,2026-05-13 23:52:01.770062+00
+401,3463ba9c-c9ac-4925-ab74-f4f87b7cf740,user,¿Las clases son virtuales o presenciales?,14,2026-06-06 23:47:01.770062+00
+402,3463ba9c-c9ac-4925-ab74-f4f87b7cf740,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,33,2026-06-06 23:48:01.770062+00
+403,3463ba9c-c9ac-4925-ab74-f4f87b7cf740,user,¿Cuándo empieza el curso de SSOMA?,10,2026-06-06 23:49:01.770062+00
+404,3463ba9c-c9ac-4925-ab74-f4f87b7cf740,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",43,2026-06-06 23:50:01.770062+00
+405,de29edd2-efef-455a-8032-a263d8e9d0b2,user,¿Cómo me inscribo a un programa?,10,2026-05-24 23:47:01.770062+00
+406,de29edd2-efef-455a-8032-a263d8e9d0b2,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,31,2026-05-24 23:48:01.770062+00
+407,de29edd2-efef-455a-8032-a263d8e9d0b2,user,¿Las clases son virtuales o presenciales?,13,2026-05-24 23:49:01.770062+00
+408,de29edd2-efef-455a-8032-a263d8e9d0b2,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,30,2026-05-24 23:50:01.770062+00
+409,ca8339df-4dad-4669-8645-85779a022c11,user,¿Cuánto cuesta el curso de gestión de calidad?,8,2026-06-02 23:47:01.770062+00
+410,ca8339df-4dad-4669-8645-85779a022c11,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,36,2026-06-02 23:48:01.770062+00
+411,ca8339df-4dad-4669-8645-85779a022c11,user,¿Qué es el CEE?,12,2026-06-02 23:49:01.770062+00
+412,ca8339df-4dad-4669-8645-85779a022c11,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",31,2026-06-02 23:50:01.770062+00
+413,6e00ba80-64b0-4484-adb2-66491832a63a,user,¿Qué es el CEE?,14,2026-05-28 23:47:01.770062+00
+414,6e00ba80-64b0-4484-adb2-66491832a63a,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",27,2026-05-28 23:48:01.770062+00
+415,e23b3081-6a34-48c4-ba2f-37f583293233,user,¿Cuándo empieza el curso de SSOMA?,11,2026-06-05 23:47:01.770062+00
+416,e23b3081-6a34-48c4-ba2f-37f583293233,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",42,2026-06-05 23:48:01.770062+00
+417,e23b3081-6a34-48c4-ba2f-37f583293233,user,¿Tienen cursos de logística y procesos?,8,2026-06-05 23:49:01.770062+00
+418,e23b3081-6a34-48c4-ba2f-37f583293233,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",40,2026-06-05 23:50:01.770062+00
+419,252d666f-5b72-470b-90bd-d8abd6a9dcf8,user,¿Tienen cursos de logística y procesos?,9,2026-05-20 23:47:01.770062+00
+420,252d666f-5b72-470b-90bd-d8abd6a9dcf8,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",43,2026-05-20 23:48:01.770062+00
+421,9fae609d-7501-45fb-b958-d6be3c1b1459,user,¿Qué es el CEE?,13,2026-05-15 23:47:01.770062+00
+422,9fae609d-7501-45fb-b958-d6be3c1b1459,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",44,2026-05-15 23:48:01.770062+00
+423,9fae609d-7501-45fb-b958-d6be3c1b1459,user,¿El certificado es a nombre de la UNI?,8,2026-05-15 23:49:01.770062+00
+424,9fae609d-7501-45fb-b958-d6be3c1b1459,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",39,2026-05-15 23:50:01.770062+00
+425,9fae609d-7501-45fb-b958-d6be3c1b1459,user,¿Tienen cursos de logística y procesos?,11,2026-05-15 23:51:01.770062+00
+426,9fae609d-7501-45fb-b958-d6be3c1b1459,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",33,2026-05-15 23:52:01.770062+00
+427,6b36dfea-09f3-46cc-83f0-0ad7302e3ebf,user,¿Cuándo empieza el curso de SSOMA?,14,2026-05-17 23:47:01.770062+00
+428,6b36dfea-09f3-46cc-83f0-0ad7302e3ebf,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",42,2026-05-17 23:48:01.770062+00
+429,6b36dfea-09f3-46cc-83f0-0ad7302e3ebf,user,¿Cuánto cuesta el curso de gestión de calidad?,10,2026-05-17 23:49:01.770062+00
+430,6b36dfea-09f3-46cc-83f0-0ad7302e3ebf,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,40,2026-05-17 23:50:01.770062+00
+431,c6aa5d07-34c0-4ca2-aadc-c76b30a65df5,user,¿El certificado es a nombre de la UNI?,11,2026-06-04 23:47:01.770062+00
+432,c6aa5d07-34c0-4ca2-aadc-c76b30a65df5,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",44,2026-06-04 23:48:01.770062+00
+433,ef455389-3eca-4235-82d0-1193661e7c26,user,¿Qué cursos de especialización tienen?,15,2026-05-18 23:47:01.770062+00
+434,ef455389-3eca-4235-82d0-1193661e7c26,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",35,2026-05-18 23:48:01.770062+00
+435,ef455389-3eca-4235-82d0-1193661e7c26,user,¿Cómo me inscribo a un programa?,12,2026-05-18 23:49:01.770062+00
+436,ef455389-3eca-4235-82d0-1193661e7c26,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,37,2026-05-18 23:50:01.770062+00
+437,ef455389-3eca-4235-82d0-1193661e7c26,user,¿Qué cursos de especialización tienen?,9,2026-05-18 23:51:01.770062+00
+438,ef455389-3eca-4235-82d0-1193661e7c26,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",25,2026-05-18 23:52:01.770062+00
+439,bf63119b-5bb2-40aa-95b4-30afc040b6c5,user,¿El certificado es a nombre de la UNI?,10,2026-05-23 23:47:01.770062+00
+440,bf63119b-5bb2-40aa-95b4-30afc040b6c5,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",25,2026-05-23 23:48:01.770062+00
+441,bf63119b-5bb2-40aa-95b4-30afc040b6c5,user,¿Las clases son virtuales o presenciales?,8,2026-05-23 23:49:01.770062+00
+442,bf63119b-5bb2-40aa-95b4-30afc040b6c5,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-05-23 23:50:01.770062+00
+443,bf63119b-5bb2-40aa-95b4-30afc040b6c5,user,¿Qué cursos de especialización tienen?,15,2026-05-23 23:51:01.770062+00
+444,bf63119b-5bb2-40aa-95b4-30afc040b6c5,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",40,2026-05-23 23:52:01.770062+00
+445,ce583f6b-8cab-497c-a425-d3b173f0e4b6,user,¿Cuándo empieza el curso de SSOMA?,12,2026-05-13 23:47:01.770062+00
+446,ce583f6b-8cab-497c-a425-d3b173f0e4b6,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",42,2026-05-13 23:48:01.770062+00
+447,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,user,¿Cuánto cuesta el curso de gestión de calidad?,11,2026-05-15 23:47:01.770062+00
+448,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,38,2026-05-15 23:48:01.770062+00
+449,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,user,¿Qué es el CEE?,10,2026-05-15 23:49:01.770062+00
+450,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",25,2026-05-15 23:50:01.770062+00
+451,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,user,¿El certificado es a nombre de la UNI?,8,2026-05-15 23:51:01.770062+00
+452,5c7c9292-0d15-4d09-af84-1d85bdd0fe06,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",43,2026-05-15 23:52:01.770062+00
+453,79462db7-1504-486f-bf9e-d8ff97c9b4ca,user,¿Qué cursos de especialización tienen?,9,2026-06-04 23:47:01.770062+00
+454,79462db7-1504-486f-bf9e-d8ff97c9b4ca,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",33,2026-06-04 23:48:01.770062+00
+455,c451e14e-3ba4-4292-b874-821eb2448d78,user,¿Cómo me inscribo a un programa?,8,2026-05-22 23:47:01.770062+00
+456,c451e14e-3ba4-4292-b874-821eb2448d78,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,35,2026-05-22 23:48:01.770062+00
+457,c451e14e-3ba4-4292-b874-821eb2448d78,user,¿Qué cursos de especialización tienen?,15,2026-05-22 23:49:01.770062+00
+458,c451e14e-3ba4-4292-b874-821eb2448d78,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",44,2026-05-22 23:50:01.770062+00
+459,7ca7608f-36e6-4489-8926-cbd0be7d4c89,user,¿Qué cursos de especialización tienen?,15,2026-05-26 23:47:01.770062+00
+460,7ca7608f-36e6-4489-8926-cbd0be7d4c89,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",34,2026-05-26 23:48:01.770062+00
+461,7ca7608f-36e6-4489-8926-cbd0be7d4c89,user,¿Cuándo empieza el curso de SSOMA?,10,2026-05-26 23:49:01.770062+00
+462,7ca7608f-36e6-4489-8926-cbd0be7d4c89,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",25,2026-05-26 23:50:01.770062+00
+463,7ca7608f-36e6-4489-8926-cbd0be7d4c89,user,¿El certificado es a nombre de la UNI?,15,2026-05-26 23:51:01.770062+00
+464,7ca7608f-36e6-4489-8926-cbd0be7d4c89,assistant,"Sí, el certificado es emitido a nombre de la Universidad Nacional de Ingeniería (UNI).",30,2026-05-26 23:52:01.770062+00
+465,84dbae05-db49-4f37-ba24-bd4ba34148ba,user,¿Tienen cursos de logística y procesos?,10,2026-05-26 23:47:01.770062+00
+466,84dbae05-db49-4f37-ba24-bd4ba34148ba,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",41,2026-05-26 23:48:01.770062+00
+467,e9005464-ea02-440e-9841-318b91ee30e4,user,¿Qué es el CEE?,9,2026-05-19 23:47:01.770062+00
+468,e9005464-ea02-440e-9841-318b91ee30e4,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",43,2026-05-19 23:48:01.770062+00
+469,e9005464-ea02-440e-9841-318b91ee30e4,user,¿Qué es el CEE?,14,2026-05-19 23:49:01.770062+00
+470,e9005464-ea02-440e-9841-318b91ee30e4,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",37,2026-05-19 23:50:01.770062+00
+471,95e3a9b7-7170-4f0a-aa57-28e53001a383,user,¿Cuánto cuesta el curso de gestión de calidad?,14,2026-05-26 23:47:01.770062+00
+472,95e3a9b7-7170-4f0a-aa57-28e53001a383,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,29,2026-05-26 23:48:01.770062+00
+473,95e3a9b7-7170-4f0a-aa57-28e53001a383,user,¿Tienen cursos de logística y procesos?,13,2026-05-26 23:49:01.770062+00
+474,95e3a9b7-7170-4f0a-aa57-28e53001a383,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",43,2026-05-26 23:50:01.770062+00
+475,95e3a9b7-7170-4f0a-aa57-28e53001a383,user,¿Tienen cursos de logística y procesos?,9,2026-05-26 23:51:01.770062+00
+476,95e3a9b7-7170-4f0a-aa57-28e53001a383,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",26,2026-05-26 23:52:01.770062+00
+477,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,user,¿Qué es el CEE?,12,2026-05-30 23:47:01.770062+00
+478,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",38,2026-05-30 23:48:01.770062+00
+479,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,user,¿Cómo me inscribo a un programa?,8,2026-05-30 23:49:01.770062+00
+480,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,33,2026-05-30 23:50:01.770062+00
+481,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,user,¿Cuándo empieza el curso de SSOMA?,12,2026-05-30 23:51:01.770062+00
+482,6d1d42ec-e3ed-4438-bb6e-0f3d889b9149,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",31,2026-05-30 23:52:01.770062+00
+483,2884ef82-f088-40b8-aaa1-78ef9001ec7c,user,¿Cuándo empieza el curso de SSOMA?,12,2026-05-24 23:47:01.770062+00
+484,2884ef82-f088-40b8-aaa1-78ef9001ec7c,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",35,2026-05-24 23:48:01.770062+00
+485,2884ef82-f088-40b8-aaa1-78ef9001ec7c,user,¿Cuánto cuesta el curso de gestión de calidad?,8,2026-05-24 23:49:01.770062+00
+486,2884ef82-f088-40b8-aaa1-78ef9001ec7c,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,26,2026-05-24 23:50:01.770062+00
+487,2884ef82-f088-40b8-aaa1-78ef9001ec7c,user,¿Tienen cursos de logística y procesos?,10,2026-05-24 23:51:01.770062+00
+488,2884ef82-f088-40b8-aaa1-78ef9001ec7c,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",27,2026-05-24 23:52:01.770062+00
+489,e1cd69fb-060f-4d61-8202-d22947f47769,user,¿Cuándo empieza el curso de SSOMA?,8,2026-05-29 23:47:01.770062+00
+490,e1cd69fb-060f-4d61-8202-d22947f47769,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",37,2026-05-29 23:48:01.770062+00
+491,e1cd69fb-060f-4d61-8202-d22947f47769,user,¿Tienen cursos de logística y procesos?,11,2026-05-29 23:49:01.770062+00
+492,e1cd69fb-060f-4d61-8202-d22947f47769,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",43,2026-05-29 23:50:01.770062+00
+493,65082a83-354a-45d1-ba26-b4a382561c6c,user,¿Qué es el CEE?,14,2026-06-01 23:47:01.770062+00
+494,65082a83-354a-45d1-ba26-b4a382561c6c,assistant,"El CEE es el Centro de Especialización Ejecutiva de la UNI-FIIS; brinda capacitación práctica de alta calidad en gestión, innovación, procesos, seguridad y más.",31,2026-06-01 23:48:01.770062+00
+495,65082a83-354a-45d1-ba26-b4a382561c6c,user,¿Cuándo empieza el curso de SSOMA?,8,2026-06-01 23:49:01.770062+00
+496,65082a83-354a-45d1-ba26-b4a382561c6c,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",33,2026-06-01 23:50:01.770062+00
+497,65082a83-354a-45d1-ba26-b4a382561c6c,user,¿Cuándo empieza el curso de SSOMA?,15,2026-06-01 23:51:01.770062+00
+498,65082a83-354a-45d1-ba26-b4a382561c6c,assistant,"El curso de Gestión de Seguridad, Salud Ocupacional y Medio Ambiente (SSOMA) inicia el 20 de junio. ¡Vacantes limitadas!",31,2026-06-01 23:52:01.770062+00
+499,9b71c774-f18b-4da5-afa9-2d719908d43d,user,¿Las clases son virtuales o presenciales?,11,2026-05-27 23:47:01.770062+00
+500,9b71c774-f18b-4da5-afa9-2d719908d43d,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,30,2026-05-27 23:48:01.770062+00
+501,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,user,¿Qué cursos de especialización tienen?,11,2026-06-01 23:47:01.770062+00
+502,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,assistant,"Ofrecemos programas en gestión, innovación, procesos, seguridad, logística, calidad y productividad. ¿Sobre cuál quieres más información?",32,2026-06-01 23:48:01.770062+00
+503,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,user,¿Las clases son virtuales o presenciales?,8,2026-06-01 23:49:01.770062+00
+504,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-06-01 23:50:01.770062+00
+505,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,user,¿Tienen cursos de logística y procesos?,9,2026-06-01 23:51:01.770062+00
+506,b9ae5684-4ace-4ef3-a98c-cc7478f977cb,assistant,"Sí, contamos con cursos especializados en logística, procesos, calidad y productividad.",37,2026-06-01 23:52:01.770062+00
+507,199ff764-77cd-449a-86cc-30bf43fb770c,user,¿Cómo me inscribo a un programa?,14,2026-05-21 23:47:01.770062+00
+508,199ff764-77cd-449a-86cc-30bf43fb770c,assistant,La inscripción es en línea: completas tus datos y un asesor te contacta. También puedes escribir al WhatsApp 966 644 502.,42,2026-05-21 23:48:01.770062+00
+509,199ff764-77cd-449a-86cc-30bf43fb770c,user,¿Cuánto cuesta el curso de gestión de calidad?,12,2026-05-21 23:49:01.770062+00
+510,199ff764-77cd-449a-86cc-30bf43fb770c,assistant,Con gusto te paso la inversión y las formas de pago. Escríbenos a cee-fiis@uni.edu.pe para la información detallada.,27,2026-05-21 23:50:01.770062+00
+511,0290a4e8-4143-485a-bcb4-049627cdc314,user,¿Las clases son virtuales o presenciales?,12,2026-05-21 23:47:01.770062+00
+512,0290a4e8-4143-485a-bcb4-049627cdc314,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,36,2026-05-21 23:48:01.770062+00
+513,0290a4e8-4143-485a-bcb4-049627cdc314,user,¿Las clases son virtuales o presenciales?,10,2026-05-21 23:49:01.770062+00
+514,0290a4e8-4143-485a-bcb4-049627cdc314,assistant,Tenemos modalidades virtual y presencial según el programa. La mayoría son en vivo y quedan grabadas.,27,2026-05-21 23:50:01.770062+00
