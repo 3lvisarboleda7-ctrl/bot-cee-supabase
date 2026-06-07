@@ -1,4 +1,4 @@
-# Bot a Costo Cero — Persona 3: Persistencia y Autenticación (Supabase)
+# Bot a Costo Cero — Persistencia y Autenticación (Supabase)
 
 Capa de **base de datos + autenticación** del chatbot del **CEE — Centro de Especialización Ejecutiva (UNI-FIIS)**.
 La página web donde se aloja el bot la gestiona **CCAT**.
