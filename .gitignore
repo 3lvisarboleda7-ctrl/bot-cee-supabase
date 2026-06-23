@@ -49,6 +49,13 @@ graphify-out/
 # --- Script de build del Word (opcional, artefacto local) ---
 build_resumen.js
 
+# --- Artefactos de testing del widget (capturas/scripts de Playwright) ---
+widget/check_*.js
+widget/check_*.png
+widget/screenshot_test.js
+widget/0[0-9]_*.png
+widget/package-lock.json
+
 # --- Supabase local (si se usa CLI más adelante) ---
 .branches/
 .temp/

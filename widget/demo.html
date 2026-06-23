@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo — Bot CEE FIIS-UNI</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #1c1c1e;
+    }
+    header {
+      background: #003087;
+      color: white;
+      padding: 18px 32px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+    header span { opacity: 0.75; font-weight: 400; font-size: 14px; margin-left: 12px; }
+    main {
+      max-width: 800px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+    h2 { font-size: 22px; margin-bottom: 12px; color: #003087; }
+    p  { line-height: 1.7; color: #444; margin-bottom: 16px; }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    code {
+      background: #f0f2f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background: #1c1c1e;
+      color: #e8e8e8;
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+    .tag {
+      display: inline-block;
+      background: #e8f0fe;
+      color: #003087;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  CEE · Centro de Especialización Ejecutiva
+  <span>FIIS — Universidad Nacional de Ingeniería</span>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Bienvenido al CEE</h2>
+    <p>
+      El CEE ofrece programas de especialización ejecutiva con certificación de la UNI en áreas de
+      gestión, calidad, seguridad, logística e innovación.
+    </p>
+    <p>
+      <span class="tag">Virtual</span>
+      <span class="tag">Presencial</span>
+      <span class="tag">Certificado UNI</span>
+      <span class="tag">Clases grabadas</span>
+    </p>
+    <p>
+      Haz click en el botón azul de la esquina inferior derecha para chatear con <strong>Ceci</strong>,
+      nuestra asistente virtual. Puedes preguntarle por cursos, horarios, sílabos y más.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>¿Cómo integrar el bot en tu página?</h2>
+    <p>Pega estas dos líneas antes del <code>&lt;/body&gt;</code> de tu página:</p>
+    <pre>&lt;!-- Configuración opcional (ajustar si hay BD en Supabase) --&gt;
+&lt;script&gt;
+  window.CEE_CONFIG = {
+    botName:     'Ceci',
+    botSubtitle: 'Asistente del CEE · FIIS-UNI',
+    whatsapp:    '51966644502',
+    email:       'cee-fiis@uni.edu.pe',
+    // supabaseUrl: 'https://xxx.supabase.co',
+    // supabaseKey: 'tu_anon_key',
+  };
+&lt;/script&gt;
+
+&lt;!-- Widget --&gt;
+&lt;script src="widget.js"&gt;&lt;/script&gt;</pre>
+    <p style="margin-top:12px;">
+      Sin <code>supabaseUrl</code> el bot funciona igual, con respuestas estáticas y derivación a
+      WhatsApp/correo. Con Supabase configurado consultará el catálogo de cursos en tiempo real.
+    </p>
+  </div>
+</main>
+
+<!-- ── WIDGET CEE ────────────────────────────────────────────── -->
+<script>
+  window.CEE_CONFIG = {
+    botName:     'Ceci',
+    botSubtitle: 'Asistente del CEE · FIIS-UNI',
+    whatsapp:    '51966644502',
+    email:       'cee-fiis@uni.edu.pe',
+    cssUrl:      'widget.css',
+    // supabaseUrl: '',   // dejar vacío para demo sin BD
+    // supabaseKey: '',
+  };
+</script>
+<script src="widget.js"></script>
+
+</body>
+</html>
