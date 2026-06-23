@@ -50,6 +50,107 @@
         return res.json();
       } catch { return null; }
     },
+
+    async insert(table, row) {
+      const token = await AUTH.getToken();
+      if (!token) return null;
+      try {
+        const res = await fetch(`${CFG.supabaseUrl}/rest/v1/${encodeURIComponent(table)}`, {
+          method: 'POST',
+          headers: {
+            apikey: CFG.supabaseKey,
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+            Prefer: 'return=representation',
+          },
+          body: JSON.stringify(row),
+        });
+        if (!res.ok) return null;
+        const data = await res.json();
+        return Array.isArray(data) ? data[0] : data;
+      } catch { return null; }
+    },
+  };
+
+  // ── Sesión anónima (Supabase Anonymous Auth) ────────────────
+  // Necesaria para que RLS reconozca auth.uid() al guardar el historial.
+  const AUTH = {
+    _token: null,
+    _userId: null,
+
+    async getToken() {
+      if (!CFG.supabaseUrl || !CFG.supabaseKey) return null;
+      if (this._token) return this._token;
+
+      const cached = sessionStorage.getItem('cee_auth_session');
+      if (cached) {
+        try {
+          const session = JSON.parse(cached);
+          this._token = session.access_token;
+          this._userId = session.user_id;
+          return this._token;
+        } catch { /* sesión corrupta, se vuelve a crear */ }
+      }
+
+      try {
+        const res = await fetch(`${CFG.supabaseUrl}/auth/v1/signup`, {
+          method: 'POST',
+          headers: {
+            apikey: CFG.supabaseKey,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({}),
+        });
+        if (!res.ok) return null;
+        const data = await res.json();
+        this._token = data.access_token;
+        this._userId = data.user && data.user.id;
+        if (this._token && this._userId) {
+          sessionStorage.setItem('cee_auth_session', JSON.stringify({
+            access_token: this._token,
+            user_id: this._userId,
+          }));
+        }
+        return this._token;
+      } catch { return null; }
+    },
+
+    getUserId() { return this._userId; },
+  };
+
+  // ── Persistencia del historial (conversations / messages) ───
+  const HISTORY = {
+    conversationId: null,
+
+    async ensureConversation() {
+      if (this.conversationId) return this.conversationId;
+      if (!CFG.supabaseUrl || !CFG.supabaseKey) return null;
+
+      const token = await AUTH.getToken();
+      if (!token) return null;
+
+      const cachedId = sessionStorage.getItem('cee_conversation_id');
+      if (cachedId) {
+        this.conversationId = cachedId;
+        return this.conversationId;
+      }
+
+      const row = await DB.insert('conversations', {
+        user_id: AUTH.getUserId(),
+        title: 'Chat con Ceci · CEE',
+      });
+      if (row && row.id) {
+        this.conversationId = row.id;
+        sessionStorage.setItem('cee_conversation_id', row.id);
+      }
+      return this.conversationId;
+    },
+
+    async saveMessage(role, content) {
+      const conversationId = await this.ensureConversation();
+      if (!conversationId) return;
+      await DB.insert('messages', { conversation_id: conversationId, role, content });
+    },
   };
 
   // ── Base de conocimiento estática (fallback sin BD) ──────────
@@ -583,6 +684,7 @@
       input.value = '';
       input.style.height = 'auto';
       addMessage(msg, 'user');
+      HISTORY.saveMessage('user', msg);
       showTyping(true);
       // Mínimo 600ms de typing para que no sea abrupto
       const [reply] = await Promise.all([
@@ -591,6 +693,7 @@
       ]);
       showTyping(false);
       addMessage(reply, 'bot');
+      HISTORY.saveMessage('assistant', reply);
     }
 
     // ── Helpers de estado ──

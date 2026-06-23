@@ -20,8 +20,9 @@ Capa de **base de datos + autenticación** y **widget del chatbot informativo** 
 | Esquema de negocio CEE (catálogo, cursos, horarios, sílabos) | ✅ | `sql/07_esquema_cee.sql` |
 | Widget del chatbot informativo (Ceci) — UI, lógica, respuestas | ✅ | `widget/widget.js` · `widget/widget.css` |
 | Diseño del bot: respuestas, fuera de alcance, acciones en página, visual | ✅ | `Diseno_Bot_Informativo.md` · `Informe_Integracion_Chatbot_CEE.docx` |
+| Persistencia del historial del chat (`conversations`/`messages` vía Anonymous Auth) | ✅ | `widget/widget.js` (`AUTH`, `HISTORY`) |
 
-> ⏳ **Pendiente para producción:** cargar datos reales del CEE en las tablas de catálogo, configurar `supabaseUrl`/`supabaseKey` reales en `window.CEE_CONFIG`, y alojar `widget.js`/`widget.css` en la página real del CEE (gestionada por CCAT). Sin esto, el widget funciona igual pero con contenido estático de respaldo.
+> ⏳ **Pendiente para producción:** cargar datos reales del CEE en las tablas de catálogo, configurar `supabaseUrl`/`supabaseKey` reales en `window.CEE_CONFIG`, y alojar `widget.js`/`widget.css` en la página real del CEE (gestionada por CCAT). Sin esto, el widget funciona igual pero con contenido estático de respaldo y sin guardar el historial.
 
 ---
 
@@ -79,6 +80,16 @@ Asistente virtual informativo embebible con `<script>` (sin frameworks, sin buil
 ```
 
 Responde sobre cursos, sílabos, horarios, certificación y financiamiento; declina y reencauza preguntas fuera de alcance; escala a WhatsApp/correo ante intención de inscripción o pago; y captura el contacto del usuario tras varias preguntas de precio. El diseño completo (flujos, reglas de fuera de alcance, acciones en página y apartado visual) está documentado en `Diseno_Bot_Informativo.md` e `Informe_Integracion_Chatbot_CEE.docx`.
+
+### Persistencia del historial (conversations / messages)
+
+Cuando `supabaseUrl` y `supabaseKey` están configurados, el widget:
+
+1. Crea automáticamente una **sesión anónima** (`POST /auth/v1/signup`) la primera vez que el usuario envía un mensaje, y guarda el token en `sessionStorage` para reutilizarlo durante la pestaña.
+2. Crea una **conversación** (`conversations`) asociada a ese `user_id` anónimo.
+3. Guarda **cada mensaje** del usuario y de Ceci en `messages`, respetando el RLS de `sql/01_esquema.sql` (cada usuario anónimo solo puede ver y escribir su propio historial).
+
+Si no hay credenciales configuradas, o si la petición a Supabase falla por cualquier motivo, el guardado se omite en silencio y el chat sigue funcionando con normalidad (modo solo-UI, sin persistencia).
 
 ---
 
