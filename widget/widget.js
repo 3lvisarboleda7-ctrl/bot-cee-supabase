@@ -477,83 +477,27 @@
   function buildWidget() {
     if (document.getElementById('cee-fab')) return;
 
-    // ── Avatar CSS de Ceci (holográfico con SVG puro) ──
-    const CECI_HEAD_SVG = `
-      <svg class="cee-avatar-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-        <!-- Halo holográfico -->
-        <circle cx="50" cy="45" r="42" fill="none" stroke="rgba(56,189,248,0.25)" stroke-width="1.5" opacity="0.7"/>
-        <!-- Cabeza (esfera oscura) -->
-        <circle cx="50" cy="45" r="38" fill="url(#headGrad)"/>
-        <!-- Pantalla de ojos -->
-        <circle cx="38" cy="40" r="9" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.6)" stroke-width="1.5"/>
-        <circle cx="62" cy="40" r="9" fill="rgba(56,189,248,0.15)" stroke="rgba(56,189,248,0.6)" stroke-width="1.5"/>
-        <!-- Ojos brillantes -->
-        <circle cx="38" cy="40" r="5" fill="rgba(92,212,255,0.9)" opacity="0.85"/>
-        <circle cx="62" cy="40" r="5" fill="rgba(92,212,255,0.9)" opacity="0.85"/>
-        <!-- Brillo en ojos -->
-        <circle cx="36" cy="38" r="1.5" fill="#fff" opacity="0.6"/>
-        <circle cx="60" cy="38" r="1.5" fill="#fff" opacity="0.6"/>
-        <!-- Boca sonriente -->
-        <path d="M 45 55 Q 50 58 55 55" stroke="rgba(92,212,255,0.8)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <!-- Auriculares/frame guinda -->
-        <path d="M 20 35 Q 15 45 20 55" stroke="#7B1E2E" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M 80 35 Q 85 45 80 55" stroke="#7B1E2E" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <!-- Puntos de conexión auricular -->
-        <circle cx="20" cy="35" r="2.5" fill="#C9972C"/>
-        <circle cx="80" cy="35" r="2.5" fill="#C9972C"/>
-        <defs>
-          <radialGradient id="headGrad" cx="30%" cy="30%">
-            <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1" />
-            <stop offset="70%" style="stop-color:#0d111a;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#050608;stop-opacity:1" />
-          </radialGradient>
-        </defs>
-      </svg>
-    `;
-
-    const CECI_HERO_SVG = `
-      <svg class="cee-hero-svg" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Halo superior -->
-        <circle cx="60" cy="50" r="50" fill="none" stroke="rgba(56,189,248,0.2)" stroke-width="2" opacity="0.5"/>
-        <!-- Cabeza -->
-        <circle cx="60" cy="50" r="45" fill="url(#heroHeadGrad)"/>
-        <!-- Ojos grandes -->
-        <circle cx="45" cy="45" r="11" fill="rgba(56,189,248,0.2)" stroke="rgba(56,189,248,0.7)" stroke-width="2"/>
-        <circle cx="75" cy="45" r="11" fill="rgba(56,189,248,0.2)" stroke="rgba(56,189,248,0.7)" stroke-width="2"/>
-        <circle cx="45" cy="45" r="6" fill="#5cd4ff"/>
-        <circle cx="75" cy="45" r="6" fill="#5cd4ff"/>
-        <circle cx="43" cy="43" r="2" fill="#fff" opacity="0.7"/>
-        <circle cx="73" cy="43" r="2" fill="#fff" opacity="0.7"/>
-        <!-- Boca grande sonriente -->
-        <path d="M 48 60 Q 60 65 72 60" stroke="#5cd4ff" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <!-- Marco guinda central (pecho) -->
-        <rect x="30" y="100" width="60" height="50" rx="12" fill="#7B1E2E" opacity="0.8" stroke="rgba(56,189,248,0.4)" stroke-width="1.5"/>
-        <!-- Etiqueta CEE en pecho -->
-        <text x="60" y="118" font-size="14" font-weight="700" text-anchor="middle" fill="#fff" font-family="Exo 2, sans-serif">CEE</text>
-        <text x="60" y="138" font-size="10" font-weight="600" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Exo 2, sans-serif">(UNI)</text>
-        <!-- Brazo levantado (mano saludando) -->
-        <g id="wave">
-          <line x1="85" y1="105" x2="105" y2="80" stroke="#f5f5f5" stroke-width="6" stroke-linecap="round"/>
-          <!-- Mano -->
-          <circle cx="105" cy="80" r="8" fill="#f5f5f5"/>
-          <circle cx="110" cy="75" r="3" fill="#7B1E2E"/>
-          <circle cx="112" cy="82" r="3" fill="#7B1E2E"/>
-          <circle cx="108" cy="88" r="3" fill="#7B1E2E"/>
-        </g>
-        <!-- Base holográfica inferior -->
-        <ellipse cx="60" cy="185" rx="35" ry="12" fill="url(#haloBase)"/>
-        <defs>
-          <radialGradient id="heroHeadGrad" cx="35%" cy="35%">
-            <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-            <stop offset="60%" style="stop-color:#111827;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#030712;stop-opacity:1" />
-          </radialGradient>
-          <radialGradient id="haloBase" cx="50%" cy="0%">
-            <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:0.5" />
-            <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0" />
-          </radialGradient>
-        </defs>
-      </svg>
+    // ── Ceci en imagen (render 3D holográfico) + capas de animación CSS ──
+    // ceci_head.png: cabeza compacta (FAB / header)
+    // ceci_hero.png: cuerpo completo saludando (bienvenida), envuelto en efectos:
+    //   anillos de luz que ascienden, chispas flotantes y barrido de escaneo.
+    const IMG_V = '?v=5'; // cache-busting: subir al cambiar los PNG
+    const CECI_HEAD_IMG = `<img class="cee-avatar-img" src="${ASSETS_BASE}ceci_head.png${IMG_V}" alt="" draggable="false" />`;
+    const CECI_HERO_IMG = `
+      <div class="cee-hero-fx" aria-hidden="true">
+        <span class="cee-holo-shape p1">
+          <i class="cee-pyra"><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b></i>
+        </span>
+        <span class="cee-holo-shape p2">
+          <i class="cee-pyra"><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b><b class="cee-pyra-face"></b></i>
+        </span>
+        <span class="cee-spark s1"></span>
+        <span class="cee-spark s2"></span>
+        <span class="cee-spark s3"></span>
+        <span class="cee-spark s4"></span>
+      </div>
+      <img class="cee-hero-img" src="${ASSETS_BASE}ceci_hero.png${IMG_V}" alt="${CFG.botName}" draggable="false" />
+      <div class="cee-hero-scan" aria-hidden="true" style="-webkit-mask-image:url('${ASSETS_BASE}ceci_hero.png${IMG_V}');mask-image:url('${ASSETS_BASE}ceci_hero.png${IMG_V}')"></div>
     `;
 
     // FAB
@@ -562,7 +506,7 @@
     fab.setAttribute('aria-label', 'Abrir chat CEE');
     fab.setAttribute('aria-expanded', 'false');
     fab.innerHTML = `
-      <div class="cee-avatar-wrap">${CECI_HEAD_SVG}</div>
+      <div class="cee-avatar-wrap">${CECI_HEAD_IMG}</div>
       <div id="cee-fab-label">
         Asesor Virtual CEE
         <span>¿En qué te ayudo?</span>
@@ -579,7 +523,7 @@
     panel.setAttribute('aria-label', `Chat con ${CFG.botName}`);
     panel.innerHTML = `
       <div id="cee-header">
-        <div id="cee-header-avatar-small">${CECI_HEAD_SVG}</div>
+        <div id="cee-header-avatar-small">${CECI_HEAD_IMG}</div>
         <div id="cee-header-info">
           <div id="cee-header-name">${CFG.botName}</div>
           <div id="cee-header-status">En línea · CEE FIIS-UNI</div>
@@ -656,7 +600,7 @@
       const hero = document.createElement('div');
       hero.id = 'cee-hero';
       hero.innerHTML = `
-        <div id="cee-hero-stage">${CECI_HERO_SVG}</div>
+        <div id="cee-hero-stage">${CECI_HERO_IMG}</div>
         <div id="cee-hero-name">¡Hola! Soy ${CFG.botName}</div>
         <div id="cee-hero-tag">Tu asistente del CEE · FIIS-UNI</div>
       `;
