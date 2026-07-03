@@ -1,28 +1,26 @@
 /* ============================================================
    CEE · Widget de Chatbot Informativo — Ceci
-   Paleta institucional: Guinda #7B1E2E · Dorado #C9972C
-   Estilo: Claymorphism (soft 3D, bubbly, educational)
+   Paleta institucional: Guinda #7B1E2E · Holo Cian #38BDF8
+   Estilo: Holográfico (digital, moderno, vanguardista, tecnológico)
    ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
 
 :root {
   --cee-primary:       #7B1E2E;
   --cee-primary-dark:  #5a1520;
   --cee-primary-light: #9b2437;
-  --cee-accent:        #C9972C;
-  --cee-accent-light:  #e0ae45;
+  --cee-holo:          #38bdf8;
+  --cee-holo-bright:   #5cd4ff;
+  --cee-holo-deep:     #0369a1;
   --cee-bg:            #ffffff;
-  --cee-surface:       #fdf6f0;
-  --cee-text:          #2d1a1e;
-  --cee-text-muted:    #8a6a70;
-  --cee-border:        #e8d5d8;
-  --cee-user-bg:       #7B1E2E;
+  --cee-surface:       #f4f9fd;
+  --cee-text:          #16222e;
+  --cee-text-muted:    #5b6b7c;
+  --cee-border:        #d9e6f2;
   --cee-user-text:     #ffffff;
-  --cee-bot-bg:        #fdf0f2;
-  --cee-bot-text:      #2d1a1e;
-  --cee-shadow:        0 8px 32px rgba(123, 30, 46, 0.18);
-  --cee-shadow-clay:   0 6px 0 rgba(123, 30, 46, 0.25), 0 12px 28px rgba(123, 30, 46, 0.15);
   --cee-radius:        20px;
-  --cee-font:          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --cee-font:          'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* ── Respeta prefers-reduced-motion ── */
@@ -30,8 +28,19 @@
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
+/* ── Foco visible para navegación con teclado ── */
+#cee-fab:focus-visible,
+#cee-close:focus-visible,
+#cee-send:focus-visible,
+.cee-chip:focus-visible,
+.cee-card-btn:focus-visible,
+#cee-input:focus-visible {
+  outline: 2px solid var(--cee-holo);
+  outline-offset: 2px;
+}
+
 /* ══════════════════════════════════════
-   AVATAR 3D ANIMADO DE CECI
+   AVATAR HOLOGRÁFICO ANIMADO DE CECI (imagen render 3D)
    ══════════════════════════════════════ */
 
 .cee-avatar-wrap {
@@ -39,107 +48,49 @@
   height: 40px;
   position: relative;
   flex-shrink: 0;
+  perspective: 300px;
   animation: ceeFloat 3s ease-in-out infinite;
 }
 
 @keyframes ceeFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-4px); }
+  0%   { transform: translateY(0)    rotateY(-3deg); }
+  50%  { transform: translateY(-4px) rotateY(3deg); }
+  100% { transform: translateY(0)    rotateY(-3deg); }
 }
 
-.cee-avatar-wrap svg {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 4px 6px rgba(123,30,46,0.3)) drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-  overflow: visible;
+.cee-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(10, 30, 60, 0.3)) drop-shadow(0 0 8px rgba(56, 189, 248, 0.28));
+  animation: ceeGlowPulse 3s ease-in-out infinite;
 }
 
-/* Ojos: animación de parpadeo */
-.cee-eye-l, .cee-eye-r {
-  animation: ceeBlink 4s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
-}
-.cee-eye-r { animation-delay: 0.08s; }
-
-@keyframes ceeBlink {
-  0%, 92%, 100% { transform: scaleY(1); }
-  96%           { transform: scaleY(0.08); }
+/* Pulso sutil de brillo holográfico sobre toda la imagen (sustituye el parpadeo/brillo de ojos del SVG) */
+@keyframes ceeGlowPulse {
+  0%, 100% { filter: drop-shadow(0 3px 5px rgba(10, 30, 60, 0.3)) drop-shadow(0 0 8px rgba(56, 189, 248, 0.28)); }
+  50%       { filter: drop-shadow(0 3px 5px rgba(10, 30, 60, 0.3)) drop-shadow(0 0 13px rgba(56, 189, 248, 0.5)); }
 }
 
-/* Brillo del ojo: pulso suave */
-.cee-eye-shine {
-  animation: ceeShine 3s ease-in-out infinite;
+/* ── Animaciones del personaje HERO (cuerpo completo, imagen) ── */
+#cee-hero-stage {
+  perspective: 600px;
 }
-@keyframes ceeShine {
-  0%, 100% { opacity: 0.9; }
-  50%       { opacity: 0.5; }
+.cee-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-style: preserve-3d;
+  animation: ceeHeroFloat 3.2s ease-in-out infinite, ceeGlowPulse 3s ease-in-out infinite;
 }
-
-/* Antena: oscilación suave */
-.cee-antenna {
-  transform-origin: 20px 10px;
-  animation: ceeAntenna 2.5s ease-in-out infinite;
-}
-@keyframes ceeAntenna {
-  0%, 100% { transform: rotate(-4deg); }
-  50%       { transform: rotate(4deg); }
-}
-
-/* Pulso dorado en la antena cuando el FAB está cerrado */
-.cee-antenna-dot {
-  animation: ceeAntennaDot 2.5s ease-in-out infinite;
-}
-@keyframes ceeAntennaDot {
-  0%, 100% { opacity: 1;   r: 2.5; }
-  50%       { opacity: 0.6; r: 3.5; }
-}
-
-/* Sonrisa: pulso suave de "feliz" (escala vertical, sin morph de path) */
-.cee-mouth {
-  transform-origin: center;
-  animation: ceeMouth 4s ease-in-out infinite;
-}
-@keyframes ceeMouth {
-  0%, 80%, 100% { transform: scaleY(1);   }
-  40%            { transform: scaleY(1.25); }
-}
-
-/* Mejillas: rubor pulsante */
-.cee-cheek {
-  animation: ceeCheek 3s ease-in-out infinite;
-}
-@keyframes ceeCheek {
-  0%, 100% { opacity: 0.4; }
-  50%       { opacity: 0.65; }
-}
-
-/* ── Animaciones del personaje HERO (cuerpo completo) ── */
-.cee-hero-svg { width: 100%; height: 100%; overflow: visible; }
-
-.cee-hero-float { animation: ceeHeroFloat 3.2s ease-in-out infinite; transform-origin: center; }
 @keyframes ceeHeroFloat {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-5px); }
-}
-
-.cee-hero-shadow { animation: ceeHeroShadow 3.2s ease-in-out infinite; }
-@keyframes ceeHeroShadow {
-  0%, 100% { transform: scaleX(1);    opacity: 0.20; }
-  50%       { transform: scaleX(0.86); opacity: 0.12; transform-box: fill-box; transform-origin: center; }
-}
-
-/* Brazo derecho saludando */
-.cee-hero-wave { animation: ceeWave 1.6s ease-in-out infinite; }
-@keyframes ceeWave {
-  0%, 100% { transform: rotate(0deg); }
-  25%       { transform: rotate(16deg); }
-  50%       { transform: rotate(-4deg); }
-  75%       { transform: rotate(16deg); }
+  0%   { transform: translateY(0)     rotateY(-4deg) rotateZ(-1deg); }
+  50%  { transform: translateY(-7px)  rotateY(4deg)  rotateZ(1deg); }
+  100% { transform: translateY(0)     rotateY(-4deg) rotateZ(-1deg); }
 }
 
 /* ══════════════════════════════════════
-   HERO de bienvenida (Ceci cuerpo completo)
+   HERO de bienvenida (Ceci holográfica)
    ══════════════════════════════════════ */
 #cee-hero {
   display: flex;
@@ -147,27 +98,46 @@
   align-items: center;
   text-align: center;
   padding: 4px 12px 14px;
-  animation: ceeHeroIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  animation: ceeHeroIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 @keyframes ceeHeroIn {
   from { opacity: 0; transform: translateY(12px) scale(0.92); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 #cee-hero-stage {
-  width: 130px;
-  height: 138px;
+  width: 120px;
+  height: 169px;
   margin-bottom: 2px;
+  position: relative;
+}
+/* Sombra de contacto: refuerza la sensación de figura 3D flotando sobre su base */
+#cee-hero-stage::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 74px;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.35) 0%, rgba(56, 189, 248, 0) 72%);
+  transform: translateX(-50%);
+  animation: ceeHeroShadow 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes ceeHeroShadow {
+  0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(0.88); }
+  50%       { opacity: 0.9;  transform: translateX(-50%) scale(1.08); }
 }
 #cee-hero-name {
   font-size: 16px;
   font-weight: 800;
   color: var(--cee-primary);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 #cee-hero-tag {
   font-size: 12px;
   color: var(--cee-text-muted);
   margin-top: 2px;
+  letter-spacing: 0.01em;
 }
 
 /* ══════════════════════════════════════
@@ -180,28 +150,42 @@
   right: 24px;
   height: 56px;
   border-radius: 28px;
-  background: var(--cee-primary);
+  background: linear-gradient(135deg, #8e2438 0%, #6d1a29 60%, #5a1520 100%);
   color: #fff;
-  border: none;
+  border: 1px solid rgba(92, 212, 255, 0.35);
   cursor: pointer;
-  box-shadow: var(--cee-shadow-clay);
+  box-shadow: 0 8px 24px rgba(90, 21, 32, 0.35), 0 0 18px rgba(56, 189, 248, 0.3);
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0 20px 0 8px;
   z-index: 9999;
-  transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
-  animation: ceeFabEntry 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  animation: ceeFabEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 @keyframes ceeFabEntry {
   from { transform: translateY(80px) scale(0.7); opacity: 0; }
   to   { transform: translateY(0) scale(1);      opacity: 1; }
 }
+/* Anillo de pulso holográfico alrededor del FAB */
+#cee-fab::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 33px;
+  border: 2px solid rgba(56, 189, 248, 0.55);
+  animation: ceeFabPing 2.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+@keyframes ceeFabPing {
+  0%        { transform: scale(0.95); opacity: 0.9; }
+  60%, 100% { transform: scale(1.15); opacity: 0; }
+}
 #cee-fab:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 0 rgba(123,30,46,0.2), 0 18px 36px rgba(123,30,46,0.22);
+  box-shadow: 0 12px 30px rgba(90, 21, 32, 0.4), 0 0 26px rgba(56, 189, 248, 0.5);
 }
-#cee-fab:active { transform: translateY(1px) scale(0.98); box-shadow: 0 2px 0 rgba(123,30,46,0.3), 0 6px 16px rgba(123,30,46,0.2); }
+#cee-fab:active { transform: translateY(1px) scale(0.98); box-shadow: 0 4px 12px rgba(90, 21, 32, 0.35), 0 0 12px rgba(56, 189, 248, 0.3); }
 
 #cee-fab-label {
   font-family: var(--cee-font);
@@ -226,6 +210,7 @@
   padding: 0;
   justify-content: center;
 }
+#cee-fab.cee-fab-open::before { border-radius: 50%; }
 #cee-fab.cee-fab-open #cee-fab-label,
 #cee-fab.cee-fab-open .cee-avatar-wrap { display: none; }
 #cee-fab-close-icon { display: none; }
@@ -240,7 +225,7 @@
   stroke-width: 2.5; stroke-linecap: round;
 }
 
-/* ── Panel principal (Claymorphism) ── */
+/* ── Panel principal (holográfico) ── */
 #cee-panel {
   position: fixed;
   bottom: 92px;
@@ -251,9 +236,8 @@
   height: 540px;
   background: var(--cee-bg);
   border-radius: var(--cee-radius);
-  /* Clay: borde inferior pronunciado */
-  box-shadow: 0 6px 0 var(--cee-primary-dark), 0 16px 40px rgba(123,30,46,0.18);
-  border: 3px solid rgba(123,30,46,0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 24px 64px rgba(10, 30, 60, 0.22), 0 0 32px rgba(56, 189, 248, 0.14);
   display: flex;
   flex-direction: column;
   z-index: 9998;
@@ -262,17 +246,36 @@
   transform: translateY(20px) scale(0.96);
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.25s cubic-bezier(0.34,1.36,0.64,1), opacity 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.34, 1.36, 0.64, 1), opacity 0.2s ease;
 }
 #cee-panel.cee-open {
   transform: translateY(0) scale(1);
   opacity: 1;
   pointer-events: all;
 }
+/* Barrido de escaneo holográfico al abrir */
+#cee-panel::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(92,212,255,0) 0%, rgba(92,212,255,0.16) 50%, rgba(92,212,255,0) 100%);
+  transform: translateY(-140px);
+  pointer-events: none;
+  z-index: 6;
+}
+#cee-panel.cee-open::before {
+  animation: ceeScan 0.9s ease-out 0.15s 1 both;
+}
+@keyframes ceeScan {
+  from { transform: translateY(-140px); opacity: 1; }
+  80%  { opacity: 1; }
+  to   { transform: translateY(620px);  opacity: 0; }
+}
 
 /* ── Header ── */
 #cee-header {
-  background: var(--cee-primary);
+  background: linear-gradient(135deg, #8e2438 0%, #6d1a29 55%, #4d1119 100%);
   color: #fff;
   padding: 12px 14px;
   display: flex;
@@ -281,35 +284,49 @@
   flex-shrink: 0;
   position: relative;
 }
+/* Retícula tech sutil sobre el header */
+#cee-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
+/* Línea holográfica inferior */
 #cee-header::after {
   content: '';
   position: absolute;
   bottom: -1px; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--cee-accent), transparent);
+  height: 2px;
+  background: linear-gradient(90deg, var(--cee-holo), rgba(56,189,248,0));
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
 }
 #cee-header-avatar-small {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  border: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(92, 212, 255, 0.45);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: visible;
 }
-#cee-header-avatar-small svg {
+#cee-header-avatar-small .cee-avatar-img {
   width: 28px;
   height: 28px;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
 }
 #cee-header-info { flex: 1; min-width: 0; }
-#cee-header-name { font-weight: 700; font-size: 14px; line-height: 1.2; }
+#cee-header-name { font-weight: 700; font-size: 14px; line-height: 1.2; letter-spacing: 0.02em; }
 #cee-header-status {
   font-size: 11px;
-  opacity: 0.8;
+  opacity: 0.85;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -318,27 +335,28 @@
   content: '';
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #4ade80;
+  background: #4be1ff;
   display: inline-block;
-  box-shadow: 0 0 0 2px rgba(74,222,128,0.3);
+  box-shadow: 0 0 0 2px rgba(75, 225, 255, 0.3);
   animation: ceeOnline 2s ease-in-out infinite;
 }
 @keyframes ceeOnline {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(74,222,128,0.3); }
-  50%       { box-shadow: 0 0 0 5px rgba(74,222,128,0); }
+  0%, 100% { box-shadow: 0 0 0 2px rgba(75, 225, 255, 0.3); }
+  50%       { box-shadow: 0 0 0 5px rgba(75, 225, 255, 0); }
 }
 
 #cee-close {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(92, 212, 255, 0.3);
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
   padding: 5px;
   display: flex;
-  transition: background 0.15s;
+  position: relative;
+  transition: background 0.15s, box-shadow 0.15s;
 }
-#cee-close:hover { background: rgba(255,255,255,0.22); }
+#cee-close:hover { background: rgba(255,255,255,0.2); box-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
 #cee-close svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; }
 
 /* ── Mensajes ── */
@@ -350,16 +368,16 @@
   flex-direction: column;
   gap: 8px;
   scroll-behavior: smooth;
-  background: var(--cee-surface);
+  background: #ffffff;
 }
 #cee-messages::-webkit-scrollbar { width: 4px; }
-#cee-messages::-webkit-scrollbar-thumb { background: var(--cee-border); border-radius: 4px; }
+#cee-messages::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.4); border-radius: 4px; }
 
 .cee-bubble-row {
   display: flex;
   align-items: flex-end;
   gap: 6px;
-  animation: ceeFadeIn 0.18s cubic-bezier(0.34,1.36,0.64,1);
+  animation: ceeFadeIn 0.18s cubic-bezier(0.34, 1.36, 0.64, 1);
 }
 .cee-bubble-row.cee-user { flex-direction: row-reverse; }
 
@@ -375,24 +393,24 @@
   line-height: 1.55;
   word-break: break-word;
 }
-/* Clay bubbles */
+/* Burbujas holográficas */
 .cee-bubble-row.cee-bot .cee-bubble {
   background: #fff;
-  color: var(--cee-bot-text);
-  border-radius: 18px 18px 18px 4px;
-  box-shadow: 0 3px 0 rgba(123,30,46,0.1), 0 4px 12px rgba(123,30,46,0.07);
-  border: 1.5px solid var(--cee-border);
+  color: var(--cee-text);
+  border-radius: 16px 16px 16px 4px;
+  border: 1px solid var(--cee-border);
+  box-shadow: 0 2px 10px rgba(13, 127, 216, 0.09), 0 0 1px rgba(56, 189, 248, 0.4);
 }
 .cee-bubble-row.cee-user .cee-bubble {
-  background: var(--cee-user-bg);
+  background: linear-gradient(135deg, #93253a, #5a1520);
   color: var(--cee-user-text);
-  border-radius: 18px 18px 4px 18px;
-  box-shadow: 0 3px 0 var(--cee-primary-dark), 0 4px 12px rgba(123,30,46,0.2);
+  border-radius: 16px 16px 4px 16px;
+  box-shadow: 0 4px 14px rgba(123, 30, 46, 0.32);
 }
 .cee-bubble ul { margin: 6px 0 2px 0; padding-left: 16px; }
 .cee-bubble li { margin-bottom: 4px; }
-.cee-bubble a { color: var(--cee-accent); text-decoration: underline; text-underline-offset: 2px; }
-.cee-bubble-row.cee-user .cee-bubble a { color: #fde68a; }
+.cee-bubble a { color: var(--cee-holo-deep); text-decoration: underline; text-underline-offset: 2px; }
+.cee-bubble-row.cee-user .cee-bubble a { color: #a5e7ff; }
 .cee-bubble strong { font-weight: 700; }
 
 /* ── Carrusel de tarjetas de programas (dentro de burbuja bot) ── */
@@ -406,18 +424,33 @@
   scroll-snap-type: x proximity;
 }
 .cee-card-row::-webkit-scrollbar { height: 4px; }
-.cee-card-row::-webkit-scrollbar-thumb { background: var(--cee-border); border-radius: 4px; }
+.cee-card-row::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.4); border-radius: 4px; }
 
 .cee-card {
   flex: 0 0 150px;
   scroll-snap-align: start;
-  background: var(--cee-surface);
-  border: 1.5px solid var(--cee-border);
+  background: #fff;
+  border: 1px solid var(--cee-border);
   border-radius: 14px;
-  padding: 10px;
+  padding: 12px 10px 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+/* Barra superior holográfica guinda → cian */
+.cee-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cee-primary), var(--cee-holo));
+}
+.cee-card:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 4px 16px rgba(13, 127, 216, 0.16);
 }
 .cee-card-title {
   font-size: 12.5px;
@@ -428,7 +461,7 @@
 .cee-card-price {
   font-size: 13px;
   font-weight: 700;
-  color: var(--cee-accent-light);
+  color: var(--cee-holo-deep);
 }
 .cee-card-btn {
   margin-top: auto;
@@ -437,19 +470,20 @@
   color: #fff;
   font-size: 11.5px;
   font-weight: 600;
+  font-family: var(--cee-font);
   padding: 6px 0;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, box-shadow 0.15s;
 }
-.cee-card-btn:hover { background: var(--cee-primary-light); }
+.cee-card-btn:hover { background: var(--cee-primary-light); box-shadow: 0 0 10px rgba(56, 189, 248, 0.4); }
 
 /* Chip inline insertado dentro de una respuesta (ej. financiamiento) */
 .cee-chip-inline {
   display: inline-block;
   margin-top: 8px;
-  border: 1.5px solid var(--cee-accent);
-  color: var(--cee-accent-light);
+  border: 1.5px solid var(--cee-holo-deep);
+  color: var(--cee-holo-deep);
   background: #fff;
   border-radius: 16px;
   padding: 5px 12px;
@@ -457,17 +491,18 @@
   font-weight: 600;
   cursor: pointer;
   font-family: var(--cee-font);
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
 }
-.cee-chip-inline:hover { background: var(--cee-accent); color: #fff; }
+.cee-chip-inline:hover { background: var(--cee-holo-deep); color: #fff; box-shadow: 0 0 12px rgba(56, 189, 248, 0.45); }
 
 /* ── Typing indicator ── */
 #cee-typing {
   display: none;
   padding: 10px 14px;
   background: #fff;
-  border-radius: 18px 18px 18px 4px;
-  box-shadow: 0 3px 0 rgba(123,30,46,0.1), 0 4px 12px rgba(123,30,46,0.07);
-  border: 1.5px solid var(--cee-border);
+  border-radius: 16px 16px 16px 4px;
+  border: 1px solid var(--cee-border);
+  box-shadow: 0 2px 10px rgba(13, 127, 216, 0.09);
   width: fit-content;
   gap: 5px;
   align-items: center;
@@ -476,17 +511,18 @@
 .cee-dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--cee-text-muted);
+  background: var(--cee-holo);
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
   animation: ceeBounce 1.2s infinite ease-in-out;
 }
 .cee-dot:nth-child(2) { animation-delay: 0.18s; }
 .cee-dot:nth-child(3) { animation-delay: 0.36s; }
 @keyframes ceeBounce {
-  0%, 80%, 100% { transform: translateY(0); background: var(--cee-text-muted); }
-  40%           { transform: translateY(-6px); background: var(--cee-accent); }
+  0%, 80%, 100% { transform: translateY(0);   background: var(--cee-holo); }
+  40%           { transform: translateY(-6px); background: var(--cee-primary-light); }
 }
 
-/* ── Chips (Clay style) ── */
+/* ── Chips ── */
 #cee-chips {
   padding: 8px 12px 6px;
   display: flex;
@@ -494,10 +530,10 @@
   gap: 6px;
   flex-shrink: 0;
   background: var(--cee-surface);
-  border-top: 1.5px solid var(--cee-border);
+  border-top: 1px solid var(--cee-border);
 }
 .cee-chip {
-  border: 2px solid var(--cee-primary);
+  border: 1.5px solid var(--cee-primary);
   color: var(--cee-primary);
   background: #fff;
   border-radius: 20px;
@@ -506,17 +542,17 @@
   font-weight: 600;
   cursor: pointer;
   font-family: var(--cee-font);
-  transition: all 0.18s cubic-bezier(0.34,1.36,0.64,1);
-  box-shadow: 0 2px 0 rgba(123,30,46,0.2);
+  transition: all 0.18s cubic-bezier(0.34, 1.36, 0.64, 1);
+  box-shadow: 0 1px 4px rgba(13, 127, 216, 0.08);
   white-space: nowrap;
 }
 .cee-chip:hover {
   background: var(--cee-primary);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 0 var(--cee-primary-dark);
+  box-shadow: 0 4px 12px rgba(123, 30, 46, 0.3), 0 0 12px rgba(56, 189, 248, 0.45);
 }
-.cee-chip:active { transform: translateY(0); box-shadow: 0 1px 0 var(--cee-primary-dark); }
+.cee-chip:active { transform: translateY(0); box-shadow: 0 1px 4px rgba(123, 30, 46, 0.3); }
 
 /* ── Input ── */
 #cee-input-row {
@@ -524,13 +560,13 @@
   display: flex;
   gap: 8px;
   align-items: flex-end;
-  border-top: 1.5px solid var(--cee-border);
+  border-top: 1px solid var(--cee-border);
   flex-shrink: 0;
   background: #fff;
 }
 #cee-input {
   flex: 1;
-  border: 2px solid var(--cee-border);
+  border: 1.5px solid var(--cee-border);
   border-radius: 18px;
   padding: 9px 14px;
   font-size: 14px;
@@ -545,8 +581,8 @@
   overflow-y: auto;
 }
 #cee-input:focus {
-  border-color: var(--cee-primary);
-  box-shadow: 0 0 0 3px rgba(123,30,46,0.1);
+  border-color: var(--cee-holo);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18), 0 0 12px rgba(56, 189, 248, 0.2);
   background: #fff;
 }
 #cee-input::placeholder { color: var(--cee-text-muted); }
@@ -554,18 +590,22 @@
 #cee-send {
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: var(--cee-primary);
-  border: none;
+  background: linear-gradient(135deg, #8e2438, #5a1520);
+  border: 1px solid rgba(92, 212, 255, 0.3);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 3px 0 var(--cee-primary-dark);
-  transition: all 0.18s cubic-bezier(0.34,1.36,0.64,1);
+  box-shadow: 0 3px 10px rgba(90, 21, 32, 0.35);
+  transition: all 0.18s cubic-bezier(0.34, 1.36, 0.64, 1);
 }
-#cee-send:hover { background: var(--cee-primary-light); transform: translateY(-2px); box-shadow: 0 5px 0 var(--cee-primary-dark); }
-#cee-send:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--cee-primary-dark); }
+#cee-send:hover {
+  background: linear-gradient(135deg, #9b2437, #6d1a29);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(90, 21, 32, 0.4), 0 0 14px rgba(56, 189, 248, 0.45);
+}
+#cee-send:active { transform: translateY(1px); box-shadow: 0 2px 6px rgba(90, 21, 32, 0.35); }
 #cee-send svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ══════════════════════════════════════
