@@ -58,10 +58,9 @@
   100% { transform: translateY(0)    rotateY(-3deg); }
 }
 
-.cee-avatar-img {
+.cee-avatar-svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
   filter: drop-shadow(0 3px 5px rgba(10, 30, 60, 0.3)) drop-shadow(0 0 8px rgba(56, 189, 248, 0.28));
   animation: ceeGlowPulse 3s ease-in-out infinite;
 }
@@ -72,16 +71,25 @@
   50%       { filter: drop-shadow(0 3px 5px rgba(10, 30, 60, 0.3)) drop-shadow(0 0 13px rgba(56, 189, 248, 0.5)); }
 }
 
-/* ── Animaciones del personaje HERO (cuerpo completo, imagen) ── */
+/* ── Animaciones del personaje HERO (cuerpo completo, SVG) ── */
 #cee-hero-stage {
   perspective: 600px;
 }
-.cee-hero-img {
+.cee-hero-svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
   transform-style: preserve-3d;
   animation: ceeHeroFloat 3.2s ease-in-out infinite, ceeGlowPulse 3s ease-in-out infinite;
+}
+/* Animación de saludo con la mano */
+#cee-hero-stage #wave {
+  animation: ceeWave 0.6s ease-in-out infinite;
+  transform-origin: 85px 105px;
+}
+@keyframes ceeWave {
+  0%, 100% { transform: rotateZ(0deg); }
+  25% { transform: rotateZ(-15deg); }
+  75% { transform: rotateZ(15deg); }
 }
 @keyframes ceeHeroFloat {
   0%   { transform: translateY(0)     rotateY(-4deg) rotateZ(-1deg); }
@@ -317,7 +325,7 @@
   flex-shrink: 0;
   overflow: visible;
 }
-#cee-header-avatar-small .cee-avatar-img {
+#cee-header-avatar-small .cee-avatar-svg {
   width: 28px;
   height: 28px;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
