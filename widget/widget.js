@@ -483,6 +483,8 @@
     //   anillos de luz que ascienden, chispas flotantes y barrido de escaneo.
     const IMG_V = '?v=5'; // cache-busting: subir al cambiar los PNG
     const CECI_HEAD_IMG = `<img class="cee-avatar-img" src="${ASSETS_BASE}ceci_head.png${IMG_V}" alt="" draggable="false" />`;
+    // Busto de Ceci con pedestal CEE-UNI: llena mejor el círculo del header
+    const CECI_BUST_IMG = `<img class="cee-avatar-img" src="${ASSETS_BASE}ceci_bust.png${IMG_V}" alt="" draggable="false" />`;
     const CECI_HERO_IMG = `
       <div class="cee-hero-fx" aria-hidden="true">
         <span class="cee-holo-shape p1">
@@ -523,7 +525,7 @@
     panel.setAttribute('aria-label', `Chat con ${CFG.botName}`);
     panel.innerHTML = `
       <div id="cee-header">
-        <div id="cee-header-avatar-small">${CECI_HEAD_IMG}</div>
+        <div id="cee-header-avatar-small">${CECI_BUST_IMG}</div>
         <div id="cee-header-info">
           <div id="cee-header-name">${CFG.botName}</div>
           <div id="cee-header-status">En línea · CEE FIIS-UNI</div>
