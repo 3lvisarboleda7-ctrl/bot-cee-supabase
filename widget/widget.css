@@ -351,7 +351,7 @@
   height: 540px;
   background: var(--cee-bg);
   border-radius: var(--cee-radius);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  border: 1.5px solid #C9972C; /* dorado institucional, opaco */
   box-shadow: 0 24px 64px rgba(10, 30, 60, 0.22), 0 0 32px rgba(56, 189, 248, 0.14);
   display: flex;
   flex-direction: column;
@@ -450,14 +450,14 @@
   content: '';
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #4be1ff;
+  background: #22c55e; /* verde: Ceci está en línea */
   display: inline-block;
-  box-shadow: 0 0 0 2px rgba(75, 225, 255, 0.3);
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35);
   animation: ceeOnline 2s ease-in-out infinite;
 }
 @keyframes ceeOnline {
-  0%, 100% { box-shadow: 0 0 0 2px rgba(75, 225, 255, 0.3); }
-  50%       { box-shadow: 0 0 0 5px rgba(75, 225, 255, 0); }
+  0%, 100% { box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.35); }
+  50%       { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0); }
 }
 
 #cee-close {
