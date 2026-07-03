@@ -482,8 +482,7 @@
     // ceci_hero.png: cuerpo completo saludando (bienvenida), envuelto en efectos:
     //   anillos de luz que ascienden, chispas flotantes y barrido de escaneo.
     const IMG_V = '?v=5'; // cache-busting: subir al cambiar los PNG
-    const CECI_HEAD_IMG = `<img class="cee-avatar-img" src="${ASSETS_BASE}ceci_head.png${IMG_V}" alt="" draggable="false" />`;
-    // Busto de Ceci con pedestal CEE-UNI: llena mejor el círculo del header
+    // Busto de Ceci con pedestal CEE-UNI (FAB y header)
     const CECI_BUST_IMG = `<img class="cee-avatar-img" src="${ASSETS_BASE}ceci_bust.png${IMG_V}" alt="" draggable="false" />`;
     const CECI_HERO_IMG = `
       <div class="cee-hero-fx" aria-hidden="true">
@@ -508,7 +507,7 @@
     fab.setAttribute('aria-label', 'Abrir chat CEE');
     fab.setAttribute('aria-expanded', 'false');
     fab.innerHTML = `
-      <div class="cee-avatar-wrap">${CECI_HEAD_IMG}</div>
+      <div class="cee-avatar-wrap">${CECI_BUST_IMG}</div>
       <div id="cee-fab-label">
         Asesor Virtual CEE
         <span>¿En qué te ayudo?</span>
