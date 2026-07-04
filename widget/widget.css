@@ -696,9 +696,13 @@
   overflow-y: auto;
 }
 #cee-input:focus {
-  border-color: var(--cee-holo);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18), 0 0 12px rgba(56, 189, 248, 0.2);
+  border-color: var(--cee-primary);
+  box-shadow: 0 0 0 3px rgba(123, 30, 46, 0.15), 0 0 12px rgba(123, 30, 46, 0.18);
   background: #fff;
+}
+/* El anillo de foco del input es el propio borde guinda, sin outline cian */
+#cee-input:focus-visible {
+  outline: none;
 }
 #cee-input::placeholder { color: var(--cee-text-muted); }
 
