@@ -346,7 +346,9 @@
   bottom: 92px;
   right: 24px;
   width: 360px;
-  /* altura dinámica: no supera la pantalla menos el FAB y márgenes */
+  /* altura dinámica: no supera la pantalla menos el FAB y márgenes
+     (100vh primero como respaldo para navegadores sin dvh) */
+  max-height: calc(100vh - 112px);
   max-height: calc(100dvh - 112px);
   height: 540px;
   background: var(--cee-bg);
@@ -466,7 +468,9 @@
 /* ── Mensajes ── */
 #cee-messages {
   flex: 1;
+  min-height: 0; /* permite que el área de mensajes encoja y genere scroll */
   overflow-y: auto;
+  overscroll-behavior: contain; /* el scroll no se escapa a la página de fondo */
   padding: 14px 12px;
   display: flex;
   flex-direction: column;
@@ -523,6 +527,7 @@
   display: flex;
   gap: 8px;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
   margin: 10px -2px 10px -2px;
   padding: 2px 2px 6px 2px;
   scroll-snap-type: x proximity;
@@ -727,7 +732,9 @@
     right: 8px;
     bottom: 84px;
     /* KEY FIX: limitar altura para que no salga por arriba */
+    max-height: calc(100vh - 100px);
     max-height: calc(100dvh - 100px);
+    height: min(540px, calc(100vh - 100px));
     height: min(540px, calc(100dvh - 100px));
   }
   #cee-fab { bottom: 16px; right: 10px; }
@@ -737,7 +744,9 @@
 @media (max-width: 420px) {
   #cee-panel {
     width: 100vw;
+    height: 100vh;
     height: 100dvh;
+    max-height: 100vh;
     max-height: 100dvh;
     bottom: 0;
     right: 0;
@@ -746,7 +755,16 @@
     border: none;
   }
   #cee-fab { bottom: 14px; right: 12px; }
-  #cee-fab.cee-fab-open { top: 12px; right: 12px; bottom: auto; z-index: 10000; }
+  /* Con el panel a pantalla completa, el ✕ del header es el único control
+     de cierre: el FAB se oculta para no taparlo ni duplicarlo. */
+  #cee-fab.cee-fab-open { display: none; }
   #cee-input { font-size: 16px; } /* evita zoom en iOS */
   .cee-chip  { font-size: 11.5px; padding: 4px 10px; }
+
+  /* Mientras el chat está abierto, la página de fondo no se desplaza:
+     los gestos de scroll quedan dentro del chat. */
+  html.cee-chat-abierto,
+  html.cee-chat-abierto body {
+    overflow: hidden !important;
+  }
 }

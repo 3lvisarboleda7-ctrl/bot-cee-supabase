@@ -338,12 +338,20 @@
     // Intentar BD
     const rows = await DB.get(
       'Catalogo-Servicio-Capacitacion',
-      'descripcion_servicio,tarifa_curso,estado_capacitacion,tipo_curso',
-      segmentoFiltro ? {} : {}
+      'descripcion_servicio,tarifa_curso,estado_capacitacion,tipo_curso'
     );
 
     if (rows && rows.length > 0) {
-      const activos = rows.filter(r => r.estado_capacitacion === 'A');
+      let activos = rows.filter(r => r.estado_capacitacion === 'A');
+      // Filtrar por el segmento mencionado (si algún curso coincide);
+      // si ninguno coincide se muestra el catálogo completo.
+      if (segmentoFiltro) {
+        const palabra = segmentoFiltro.split(' ')[0].toLowerCase();
+        const delSegmento = activos.filter(r =>
+          `${r.descripcion_servicio} ${r.tipo_curso || ''}`.toLowerCase().includes(palabra)
+        );
+        if (delSegmento.length > 0) activos = delSegmento;
+      }
       if (activos.length === 0) {
         return 'No hay cursos activos en este momento. Contáctanos para información actualizada:' + contactBlock();
       }
@@ -562,20 +570,34 @@
     const closeBtn = panel.querySelector('#cee-close');
 
     // ── Helpers DOM ──
+    // ¿El usuario está leyendo cerca del fondo? (si subió a releer el
+    // historial, no se le arrastra de vuelta al último mensaje)
+    function cercaDelFondo() {
+      return messages.scrollHeight - messages.scrollTop - messages.clientHeight < 120;
+    }
+
+    function scrollAlFondo(forzar) {
+      if (forzar || cercaDelFondo()) messages.scrollTop = messages.scrollHeight;
+    }
+
     function addMessage(html, role) {
       const row = document.createElement('div');
       row.className = `cee-bubble-row cee-${role}`;
       const bubble = document.createElement('div');
       bubble.className = 'cee-bubble';
-      bubble.innerHTML = html;
+      if (role === 'user') {
+        bubble.textContent = html; // texto del usuario: nunca se interpreta como HTML
+      } else {
+        bubble.innerHTML = html;
+      }
       row.appendChild(bubble);
       messages.insertBefore(row, typing);
-      messages.scrollTop = messages.scrollHeight;
+      scrollAlFondo(role === 'user');
     }
 
     function showTyping(on) {
       typing.classList.toggle('visible', on);
-      messages.scrollTop = messages.scrollHeight;
+      scrollAlFondo(false);
     }
 
     async function handleSend(text) {
@@ -608,16 +630,40 @@
       messages.insertBefore(hero, typing);
     }
 
+    // Ajusta el panel al área realmente visible en móvil: cuando el teclado
+    // virtual se abre, el panel se encoge para que el header (y su botón de
+    // cerrar) y el campo de texto sigan siempre a la vista.
+    function ajustarPanelMovil() {
+      const esMovil = window.matchMedia('(max-width: 420px)').matches;
+      if (!esMovil || !panel.classList.contains('cee-open') || !window.visualViewport) {
+        panel.style.top = '';
+        panel.style.bottom = '';
+        panel.style.height = '';
+        return;
+      }
+      const vv = window.visualViewport;
+      panel.style.top = vv.offsetTop + 'px';
+      panel.style.bottom = 'auto';
+      panel.style.height = vv.height + 'px';
+      scrollAlFondo(false);
+    }
+
     function openPanel() {
       panel.classList.add('cee-open');
       fab.classList.add('cee-fab-open');
       fab.setAttribute('aria-expanded', 'true');
       fab.setAttribute('aria-label', 'Cerrar chat CEE');
+      document.documentElement.classList.add('cee-chat-abierto');
       if (messages.querySelectorAll('.cee-bubble-row').length === 0 && !messages.querySelector('#cee-hero')) {
         insertHero();
         setTimeout(() => addMessage(`Puedo informarte sobre nuestros <strong>cursos, sílabos, horarios y certificación</strong>. ¿En qué te ayudo hoy?`, 'bot'), 350);
       }
-      input.focus();
+      // Solo en escritorio: en móvil el foco automático abre el teclado y
+      // desacomoda la vista antes de que el usuario decida escribir.
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        input.focus();
+      }
+      ajustarPanelMovil();
     }
 
     function closePanel() {
@@ -625,6 +671,11 @@
       fab.classList.remove('cee-fab-open');
       fab.setAttribute('aria-expanded', 'false');
       fab.setAttribute('aria-label', 'Abrir chat CEE');
+      document.documentElement.classList.remove('cee-chat-abierto');
+      panel.style.top = '';
+      panel.style.bottom = '';
+      panel.style.height = '';
+      input.blur(); // cierra el teclado virtual en móvil
     }
 
     // ── Eventos ──
@@ -633,6 +684,17 @@
     });
 
     closeBtn.addEventListener('click', closePanel);
+
+    // Tecla Escape: cierra el chat desde cualquier parte de la página
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && panel.classList.contains('cee-open')) closePanel();
+    });
+
+    // Teclado virtual móvil: re-ajustar el panel cuando cambia el área visible
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', ajustarPanelMovil);
+      window.visualViewport.addEventListener('scroll', ajustarPanelMovil);
+    }
 
     sendBtn.addEventListener('click', () => handleSend());
 
